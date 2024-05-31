@@ -523,13 +523,11 @@ class compression:
                                                                                Extract1=1
                                                                                                                                                     
                                                                            if N3==2:
-                                                                               Scot=format(Cot2,'08b')
+                                                                               Scot=format(Cot,'08b')
                                                                                #print(Cot2)
-                                                                               if Cot!=1:
-                                                                                   File_information5_17="1"+Scot+SINFO
 
-                                                                               elif Cot==1:
-                                                                                   File_information5_17="1"+Scot+INFO                                                                         
+
+                                                                               File_information5_17="1"+Scot+CL3+CL2+CL1+Z4                                                                         
 
                                                                                     
                                                                               
