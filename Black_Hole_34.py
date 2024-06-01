@@ -915,8 +915,8 @@ class compression:
                                                                                                 
                                                     
                                                                                                 long=len(name)
-                                                                                                name1=name[:long-2]
-                                                                                                with open(name1, "wb") as f2:
+                                                                                                name2=name[:long-2]
+                                                                                                with open(name2, "wb") as f2:
                                                                                                     f2.write(width_bits3)
                                                                                                 x2 = time()
                                                                                                 x3=x2-x
