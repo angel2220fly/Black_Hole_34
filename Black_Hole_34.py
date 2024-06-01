@@ -580,7 +580,7 @@ class compression:
 
                                                     if Cot3==0:
                                                                     Cot4=int(INFO[:8],2)
-                                                                    print(Cot4)
+                                                                    #print(Cot4)
                                                                     INFO=INFO[8:]        
                                             
                                                     while Extract1!=1:
