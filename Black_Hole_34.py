@@ -503,7 +503,7 @@ class compression:
                                                                            #print(Cot)
                                                                            #print(len(Z4))
                                                                            #print(long_11)
-                                                                           INFO="1"+CL3+CL2+CL1+Z4
+                                                                           INFO="01"+CL3+CL2+CL1+Z4
                                                                            N4=2
                                                                            if N4==2:                                                                             
                                                                                     
