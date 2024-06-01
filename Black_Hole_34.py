@@ -9,7 +9,6 @@ add_bits=""
 
 
 
-name_input = input("c,  compress or e, extract? ")
 #@Author Jurijus Pacalovas
 class compression:
         def cryptograpy_compression4(self):
@@ -81,18 +80,24 @@ class compression:
                         
 
                 self.name = "Written: Jurijus pacalovas"
-                if name_input!="c" and name_input!="e":
-                        print("The wrong letter")
-                        raise SystemExit
-                if name_input=="c" or name_input=="e":        
-                    if name_input=="c":
-                        i=1
-                    if name_input=="e":
-                      
-                        i=2
+                N5=1
+                if N5==1:
+
+                
+                
+                
                     Clear=""
                     name = input("What is name of file input? ")
-                    name_output= input("What is name of file output? ")
+                    long_21=len(name)
+                    name_f=name[long_21-2:]
+                    if name_f==".b":
+                        
+                            i=2
+                            
+                    else:
+                      
+                        i=1
+                    #print(i)
 
  
     
@@ -559,10 +564,11 @@ class compression:
                                                             File_information5_2=Clear
                                                         
                                                             jl=width_bits3
+                                                            name1=name+".b"
 
                                                    
                                                     
-                                                            with open(name_output, "wb") as f2:
+                                                            with open(name1, "wb") as f2:
                                                                 f2.write(jl)
                                                             
                                                             x2 = time()
@@ -908,8 +914,9 @@ class compression:
                                                                                        
                                                                                                 
                                                     
-                                                                                                
-                                                                                                with open(name_output, "wb") as f2:
+                                                                                                long=len(name)
+                                                                                                name1=name[:long-2]
+                                                                                                with open(name1, "wb") as f2:
                                                                                                     f2.write(width_bits3)
                                                                                                 x2 = time()
                                                                                                 x3=x2-x
