@@ -444,7 +444,7 @@ class compression:
                                                                                                                                                                                                                 
                                                                                                                                                                                                                                                                                                                                                                                     
                                                                                                                                                                                                                                                                                                                                                                                     
-                                                                        elif len(Z4)+8+13+8+len(C1) < long_11*8:
+                                                                        elif len(Z4)+8+13+8+len(C1) < long_11*8 and len(C1)!=0:
                                                                             
                                                                             
                                                                             input_string+= "En="+str(En)+", "+"Longl_F="+str(len(Z4))+" / "
@@ -485,7 +485,7 @@ class compression:
                                                                     W="0"+str(len(C1))+"b"
                                                                     CL1=format(longl,W)        
                                                                     CL2=format(En,'01b')
-                                                                    CL3=format(len(CL2),'04b')
+                                                                    CL3=format(len(CL2),'06b')
                                                                     
                                                                  
                                                                    
@@ -534,7 +534,7 @@ class compression:
                                                                           
                                                                                Cot2=Cot
                                                                                
-                                                                           if len(Z4)>long_11 or Cot==4:
+                                                                           if len(Z4)>long_11:
                                                                                                                  
                                                                                N3=2
                                                                                
@@ -616,9 +616,9 @@ class compression:
                                      
                                                     
     
-                                                                Cut=int(INFO[:4],2)
+                                                                Cut=int(INFO[:6],2)
                                                                
-                                                                INFO=INFO[4:]                                 
+                                                                INFO=INFO[6:]                                 
                                                                 
                                                                 En2=0
                                                                     
