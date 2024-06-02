@@ -218,7 +218,7 @@ class compression:
                                                     Extract1=0
                                                     
                                                     Find=0
-                                                    En=255
+                                                    En=6
                                                     Ci=1
                                                     M1=0
                                                     En1=0
