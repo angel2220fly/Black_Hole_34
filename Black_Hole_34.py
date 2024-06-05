@@ -485,7 +485,7 @@ class compression:
                                                                     W="0"+str(len(C1))+"b"
                                                                     CL1=format(longl,W)        
                                                                     CL2=format(En,'01b')
-                                                                    CL3=format(len(CL2),'06b')
+                                                                    CL3=format(len(CL2),'05b')
                                                                     
                                                                  
                                                                    
@@ -503,19 +503,8 @@ class compression:
                                                                            #print(Cot)
                                                                            #print(len(Z4))
                                                                            #print(long_11)
-                                                                           INFO="1"+CL3+CL2+CL1+Z4
-                                                                           N4=2
-                                                                           if N4==2:                                                                             
-                                                                                    
-                                                                               long_1=len(INFO)
-                                                                               add_bits=""
-                                                                               count_bits=8-long_1%8
-                                                                               z=0
-                                                                               if count_bits!=0:
-                                                                                       while z<count_bits:
-                                                                                               add_bits="0"+add_bits
-                                                                                               z=z+1
-                                                                               INFO=add_bits+INFO                                                                         
+                                                                           INFO=CL3+CL2+CL1+Z4
+                                                                        
                                                                            
                                                                            if Cot==1:
                                                                                                                                                                             Cot2=Cot
@@ -542,12 +531,22 @@ class compression:
                                                                                                                                                     
                                                                            if N3==2:
                                                                                Scot=format(Cot,'08b')
-                                                                               #print(Cot2)
+                                                                               #print(Cot)
 
 
-                                                                               File_information5_17=Scot+INFO                                                                  
-
+                                                                               File_information5_17="1"+Scot+INFO
+                                                                               N4=2
+                                                                               if N4==2:                                                                             
                                                                                     
+                                                                                       long_1=len(File_information5_17)
+                                                                                       add_bits=""
+                                                                                       count_bits=8-long_1%8
+                                                                                       z=0
+                                                                                       if count_bits!=0:
+                                                                                               while z<count_bits:
+                                                                                                       add_bits="0"+add_bits
+                                                                                                       z=z+1
+                                                                                       File_information5_17=add_bits+File_information5_17                                                                                     
 
                                                                              
                                                                                
@@ -584,17 +583,11 @@ class compression:
                                         Extract1=0
                                         if   File_information6_Times2==0:
 
-                                                    if Cot3==0:
-                                                                    Cot4=int(INFO[:8],2)
-                                                                    #print(Cot4)
-                                                                    INFO=INFO[8:]        
+      
                                             
-                                                    while Extract1!=1:
-                                                      
-                                                        if Cot==0:
-                                                            Cot3=1                                             
+                                          
                                                         File_information5=INFO    
-                                                        if   Cot3==1:
+                                                        if   Cot3==0:
                                                                 long_16=len(File_information5)
                 
                                                                 if File_information5[:1]=="0":
@@ -605,20 +598,24 @@ class compression:
                                                                             
                                                                 if File_information5[:1]=="1":
                                                                     File_information5=File_information5[1:]
+                                                        INFO=File_information5         
+                                                        if   Cot3==0:                
+                                                    
+                                                                    Cot4=int(INFO[:8],2)
+                                                                    #print(Cot4)
+                                                                    INFO=INFO[8:]
                                                                     
-                
-                
-                                                                
-                                                                Extract=File_information5
-                                                                INFO=Extract
-                                                                
-                                     
-                                     
+                                                                    
+                                                                    
+                                                        while Extract1!=1:
+                                                                Cut=int(INFO[:5],2)
+                                                      
+                                      
                                                     
     
-                                                                Cut=int(INFO[:6],2)
                                                                
-                                                                INFO=INFO[6:]                                 
+                                                               
+                                                                INFO=INFO[5:]                                 
                                                                 
                                                                 En2=0
                                                                     
@@ -880,7 +877,7 @@ class compression:
                                                                                    Extract1=0
                                                                                    N3=0
                                                                                    #print(len(Z4))
-                                                                                   #print(Cot4)
+                                                                                   print(Cot4)
                                                                                    if Cot==Cot4:
                                                                                        Extract1=1
                                                                                        N3=2
