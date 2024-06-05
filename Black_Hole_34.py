@@ -877,7 +877,7 @@ class compression:
                                                                                    Extract1=0
                                                                                    N3=0
                                                                                    #print(len(Z4))
-                                                                                   print(Cot4)
+                                                                                   #print(Cot4)
                                                                                    if Cot==Cot4:
                                                                                        Extract1=1
                                                                                        N3=2
