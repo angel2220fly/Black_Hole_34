@@ -127,7 +127,7 @@ class compression:
                     C3=0
                     C4=0
                     Cot=0
-                    Cot2=0
+                    Cot2=1
                     Cot3=0
                     
                     x = time()
@@ -519,7 +519,8 @@ class compression:
                                                                            if len(Z4)<=long_11 or Cot==255:
                                                                                long_11=len(Z4)
                                                                             
-                                                                               SINFO=CL3+CL2+CL1+Z4
+                                                                               INFOS=INFO
+                                                                             
                                                                           
                                                                                Cot2=Cot
                                                                                
@@ -528,13 +529,16 @@ class compression:
                                                                                N3=2
                                                                                
                                                                                Extract1=1
+                                                                               
                                                                                                                                                     
                                                                            if N3==2:
-                                                                               Scot=format(Cot,'08b')
-                                                                               #print(Cot)
-
-
-                                                                               File_information5_17="1"+Scot+INFO
+                                                                               Scot=format(Cot2,'08b')
+                                                                               if Cot==1:
+                                                                                   File_information5_17="1"+Scot+INFO
+                                                                                   
+                                                                                   
+                                                                               if Cot!=1:
+                                                                                   File_information5_17="1"+Scot+INFOS                                                                                 
                                                                                N4=2
                                                                                if N4==2:                                                                             
                                                                                     
