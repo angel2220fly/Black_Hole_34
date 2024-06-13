@@ -203,7 +203,7 @@ class compression:
                                     long_13=len(File_information5_2)
                                 long_12=len(File_information5_2)
                                 if i==1:
-                                    if long_17>=(2**31)-1 and i==1:
+                                    if long_17>=(2**28)-1 and i==1:
                                         print("print file is too big!")
                                         raise SystemExit
 
