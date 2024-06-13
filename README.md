@@ -7,7 +7,7 @@ Times compress 1-255
 
 From center to the top and save position. File Check that the size of the block same size or less or if 01 is 1 bit bigger and fractal manipulation of bits about 2^26 varations En 6-8191 Author: Jurijus Pacalovas Quantum Software
 
-Algorithms Black_Hole_34 includes algorithms such as:
+Algorithm Black_Hole_34 includes algorithms such as:
 
 1. Lempel-Ziv-Welch (LZW): LZW is a dictionary-based compression algorithm that works by replacing strings of characters with references to a dictionary containing previously seen strings. It is commonly used in formats such as GIF and TIFF.
 
