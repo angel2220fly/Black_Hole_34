@@ -532,7 +532,7 @@ class compression:
                                                                           
                                                                                Cot2=Cot
                                                                                
-                                                                           if len(Z4)>long_11 or Cot==255:
+                                                                           if len(Z4)>long_11 or Cot>Cot2+1 or Cot==255:
                                                                                                                  
                                                                                                                  
                                                                                N3=2
