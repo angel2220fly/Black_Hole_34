@@ -492,8 +492,8 @@ class compression:
     
                                                                     W="0"+str(len(C1))+"b"
                                                                     CL1=format(longl,W)        
-                                                                    CL2=format(En,'01b')
-                                                                    CL3=format(len(CL2),'06b')
+                                                                    CL2=format(En,'015b')
+                                                                
                                                                     
                                                                  
                                                                    
@@ -511,7 +511,7 @@ class compression:
                                                                            #print(Cot)
                                                                            #print(len(Z4))
                                                                            #print(long_11)
-                                                                           INFO=CL3+CL2+CL1+Z4
+                                                                           INFO=CL2+CL1+Z4
                                                                         
                                                                            
                                                                            if Cot==1:
@@ -621,20 +621,13 @@ class compression:
                                                                     
                                                                     
                                                         while Extract1!=1:
-                                                                Cut=int(INFO[:6],2)
-                                                      
-                                      
-                                                    
-    
-                                                               
-                                                               
-                                                                INFO=INFO[6:]                                 
                                                                 
-                                                                En2=0
+                                                                
                                                                     
-                                                                En=int(INFO[:Cut],2)
+                                                                En=int(INFO[:15],2)
                                                                     #print(longl)
-                                                                INFO=INFO[Cut:]
+                                                                INFO=INFO[15:]
+                                                                En2=0
                                                                 
                                                                 if En<=7:
                                                                     longl=int(INFO[:3],2)
@@ -764,12 +757,14 @@ class compression:
                                         
                                                                                                            
                                                                                                         EB=INFO[block:block+(En-Size)]
+                                                                                                        S=len(EB)
                                                                                                        
                                                                                                         block+=En-Size
                                                                                                         En1="0"+str(En)+"b"
-                                                                                                        
-                                                                                                     
-                                                                                                        E=int(EB,2)
+                                                                                                        if S>0:
+                                                                                                            E=int(EB,2)
+                                                                                                        else:
+                                                                                                            E=0
                                                                                                         ZE=format(E,En1)
                                                                                                         C="0"+str(longl)+"b"
                                                                                                         ZE=format(E,En1)
