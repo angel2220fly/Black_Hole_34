@@ -380,13 +380,7 @@ class compression:
                                                                                 elif En<=(8192*4)-1:
                                                                                     C1=format(C4,'015b')  
                                                                                     
-                                                                                elif En<=(8192*8)-1:
-                                                                                    C1=format(C4,'016b') 
-                                                                                    
-                                                                                elif En<=(8192*16)-1:
-                                                                                    C1=format(C4,'017b')                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
-                                                                                elif En<=(8192*32)-1:
-                                                                                    C1=format(C4,'018b')                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
                                                                                 C2=format(longl,'06b') 
                                                                                                                                                             
         
@@ -689,21 +683,11 @@ class compression:
                                                                     longl=int(INFO[:14],2) 
                                                                     INFO=INFO[14:]
                                                                     SEN=14                                                                                                                                                                       
-                                                                elif En<=(8192*8)-1:
-                                                                    longl=int(INFO[:16],2) 
-                                                                    INFO=INFO[16:]
-                                                                    SEN=16                                    
-                                                                elif En<=(8192*16)-1:
-                                                                    longl=int(INFO[:17],2) 
-                                                                    INFO=INFO[17:]
-                                                                    SEN=17 
-                                                                    
-                                                                    
-                                                                elif En<=(8192*32)-1:
-                                                                    longl=int(INFO[:18],2) 
-                                                                    INFO=INFO[18:]
-                                                                    SEN=18                                                                    
-                                                                                                                                #print(SEN)                                    
+                                                                elif En<=(8192*4)-1:
+                                                                    longl=int(INFO[:15],2) 
+                                                                    INFO=INFO[15:]
+                                                                    SEN=15                                   
+                                                                           
                                                                 
                                                                 Extract1=0
                             
