@@ -1,6 +1,8 @@
 # Black_Hole_34
 Black_Hole_34
 
+@Author Jurijus Pacalovas 
+
 Black Hole 34 Algorithm:
 
 Times compress 1-255
