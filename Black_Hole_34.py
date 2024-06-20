@@ -579,7 +579,13 @@ class compression:
                                                             
                                                             x2 = time()
                                                             x3=x2-x
+                                                            print ("Speed bits: ")
+                                                            print(long_11/x3) 
+                                                            
                                                             xs=float(x3)
+                                                            
+                                                            
+                                                            
                                                             xs=str(xs)
                                                             return xs;
                          
@@ -920,7 +926,10 @@ class compression:
                                                                                                 x2 = time()
                                                                                                 x3=x2-x
                                                                                                 xs=float(x3)
+                                                                                                print ("Speed bits: ")
+                                                                                                print(long_11/x3) 
                                                                                                 xs=str(xs)
+                                                                                                
                                                                                                 return xs;                                                           
                                                             
                                                             
