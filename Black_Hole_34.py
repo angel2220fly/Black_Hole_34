@@ -927,7 +927,7 @@ class compression:
                                                                                                 x3=x2-x
                                                                                                 xs=float(x3)
                                                                                                 print ("Speed bits: ")
-                                                                                                print(long_11/x3) 
+                                                                                                print(long_11*8/x3) 
                                                                                                 xs=str(xs)
                                                                                                 
                                                                                                 return xs;                                                           
