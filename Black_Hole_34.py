@@ -578,10 +578,11 @@ class compression:
                                                                 f2.write(jl)
                                                             
                                                             x2 = time()
-                                                            x3=x2-x
-                                                            print ("Speed bits: ")
+                                                            x3=x2-x 
+                                                            print(f"Speed bits: {(long_11) / x3:.5f}")
                                                             print(long_11/x3) 
-                                                            
+    
+                                                        
                                                             xs=float(x3)
                                                             
                                                             
@@ -926,8 +927,9 @@ class compression:
                                                                                                 x2 = time()
                                                                                                 x3=x2-x
                                                                                                 xs=float(x3)
-                                                                                                print ("Speed bits: ")
-                                                                                                print(long_11*8/x3) 
+                                                                                                print(f"Speed bits: {(long_11 * 8) / x3:.5f}")
+
+
                                                                                                 xs=str(xs)
                                                                                                 
                                                                                                 return xs;                                                           
