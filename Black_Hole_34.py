@@ -965,7 +965,7 @@ class compression:
                                                                                                                                                                                File_information5_17=Check2                      
                                                                                              
                                                                                                                                                                            if Check!=Z4:
-                                                                                                                                                                                    if len(OC)==0:
+
                                                                                                                                                                                                                                                        
                                                                                                                                                                                                                                                            File_information5_17=Check
                                                                                                                                                                                                                                                            Extract1=1
@@ -1430,7 +1430,50 @@ class compression:
                                                                                            
                                                                                            E3=int(Z[block:block+5],2)
                                                                                            block+=5
+                                                                                           S1=Z[block:block+E3]
+                                                                                           
+                                                                                           
+                                                                                           if len(S1)==0:
+                                                                                                                                    File_information5_17=Ex
+                                                                                                                       
+                                                                                                                                    L=len(File_information5_17)
+                                                                                                                                    n = int(File_information5_17, 2)
+                                                                                                                                    width_bits=len(File_information5_17)
+                                                                                                                                    width_bits=(width_bits//8)*2
+                                                                                                                                    width_bits=str(width_bits)
+                                                                                                                                    width_bits="%0"+width_bits+"x"
+                                                                                                                                    width_bits3=binascii.unhexlify(width_bits % n)
+                                                                                                                                    width_bits2=len(width_bits3)
+                                                                                                                                    File_information5_2=Clear
+                                                                                                                                 
+                                                                                                                                    jl=width_bits3
+                                                                                                                                    
+                                                                                                                           
+                                                                                                                                   
+                                                                                                                           
+                                                                                                                                    
+                                                                                        
+                                                                                                                                    long=len(name)
+                                                                                                                                    name2=name[:long-2]
+                                                                                                                                    with open(name2, "wb") as f2:
+                                                                                                                                        f2.write(width_bits3)
+                                                                                                                                    x2 = time()
+                                                                                                                                    x3=x2-x
+                                                                                                                                    xs=float(x3)
+                                                                                                                                    print(f"Speed bits: {(long_11 * 8) / x3:.5f}")
+                                    
+                                    
+                                                                                                                                    xs=str(xs)
+                                                                                                                                    
+                                                                                                                                    return xs;                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+             
+                                                                                                                    
+                                                                                                           
+               
+                                                                                                          
+                                                                                                                                                                                                 
                                                                                            E1=int(Z[block:block+E3],2)
+                                                                                          
                                                                                            block+=E3
                                                                                            E4=int(Z[block:block+5],2)
                                                                                            block+=5
@@ -1484,6 +1527,8 @@ class compression:
                                                                                        N3=2
                                                                                        
                                                                                    if N3==2:
+                                                                                       if Z4!=Check:
+                                                                                           Z4=Check
                                                                                        File_information5_17=Z4
                                                                                        long_1=len(File_information5_17)
                                                                                        add_bits=""
