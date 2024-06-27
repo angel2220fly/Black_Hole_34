@@ -969,7 +969,7 @@ class compression:
                                                                                                                                                                            if Check!=Z4:
                                                                                                                                                                                   
                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                           File_information5_17="11111111"+Check
+                                                                                                                                                                                                                                                           File_information5_17="00000000"+Check
                                                                                                                                                                                                                                                            Extract1=1
                                                                                                                                                                                                                                                            if Extract1==1:                
                                                                                                                                                                                                                                                                                                                                                                                                                     L=len(File_information5_17)
@@ -1055,7 +1055,7 @@ class compression:
                                                         Extract=0
                                                         
                                                         Ex=INFO 
-                                                        if Ex[:8]=="11111111":
+                                                        if Ex[:8]=="00000000":
                                                                
                                                                                                                
 
