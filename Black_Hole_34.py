@@ -54,7 +54,7 @@ class compression:
                                                                 long_11 = L * 8  # Length in bits
                                                                 
                                                                 # Print the speed in bits per second
-                                                                print(f"Speed bits: {long_11 / x3:.5f}")
+
                                                                 
                                                                 # Convert elapsed time to string and return
                                                                 xs = str(float(x3))
@@ -648,6 +648,12 @@ class compression:
                                                                                                                                             
                                                                                                                                             File_information5=File_information5_17
                                                                                                                                             Check2=File_information5_17
+                                                                                                                                            
+                                                                                                                                            N5==1
+                                                                                                                                            if N5==1:
+                                                                                                                                                                                                                                                           Ex="00000000"+Check
+                                                                                                                                                                                                                                                           File_information5_17=Ex
+                                                                                                                                                                                                                                                           elapsed_time = process_file1(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)                                                                                            
                                                                                                                                             Cot3=0
                                                                                                                                             Extract1=0
                                                                                                                                             Cot=0
@@ -915,6 +921,15 @@ class compression:
                                                                                                                                                                                
                                                                                                                                                                                E3=int(Z[block:block+5],2)
                                                                                                                                                                                block+=5
+                                                                                                                                                                               S5=Z[block:block+E3]
+                                                                                                                                                                               if len(S5)==0:
+                                                                                                                                                                                                   File_information5_17=Check
+                                                                                                                                                                                                   Ex=Check
+                                                                                                                                                                                                   elapsed_time = process_file1(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
+                                                                                                                                                                                                   return  elapsed_time  
+                                                                                                                                                                                   
+                                                                                                                                                                                   
+                                                                                                                                                                               
                                                                                                                                                                                E1=int(Z[block:block+E3],2)
                                                                                                                                                                                block+=E3
                                                                                                                                                                                E4=int(Z[block:block+5],2)
@@ -1061,7 +1076,7 @@ class compression:
                                                                                                                                     x2 = time()
                                                                                                                                     x3=x2-x
                                                                                                                                     xs=float(x3)
-                                                                                                                                    print(f"Speed bits: {(long_11 * 8) / x3:.5f}")
+                                                                                             
                                     
                                     
                                                                                                                                     xs=str(xs)
@@ -1334,6 +1349,12 @@ class compression:
                                                                                            
                                                                                            E3=int(Z[block:block+5],2)
                                                                                            block+=5
+                                                                                           S5=Z[block:block+E3]
+                                                                                           if len(S5)==0:
+                                                                                                                                                                                   Extract1=0
+                                                                                                                                                                                   File_information5_17=Ex
+                                                                                                                                                                                   elapsed_time = process_file(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
+                                                                                                                                                                                   return  elapsed_time                                                                                        
                                                                                            E1=int(Z[block:block+E3],2)
                                                                                            block+=E3
                                                                                            E4=int(Z[block:block+5],2)
