@@ -1199,7 +1199,15 @@ class compression:
                                                                                                                     
                                                                                                            
                                                                                                            
-                                                                                                                                                                                                                     
+                                                                                                           C="0"+str(longl)+"b"
+                                                                                                           Z2Z=format(E,C)
+                                                                                                           if len(Z2Z)==0:
+
+                                                                                                               Extract1=0
+                                                                                                               File_information5_17=Ex
+                                                                                                               elapsed_time = process_file(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
+                                                                                                               return  elapsed_time          
+                                                                                                                                                                                                                                                                                                                       
                                                                                                            ZE="01"+ZE
                                                                                                            Z2Z="01"+Z2Z
                                                                                                            block+=En-2                                                                                   
