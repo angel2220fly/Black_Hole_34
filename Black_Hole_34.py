@@ -54,6 +54,7 @@ class compression:
                                                                 long_11 = L * 8  # Length in bits
                                                                 
                                                                 # Print the speed in bits per second
+                                                                print(f"Speed bits: {(long_11 * 8) / x3:.5f}")
 
                                                                 
                                                                 # Convert elapsed time to string and return
@@ -100,7 +101,7 @@ class compression:
                                 xs = float(x3)
                                 
                                 # Print the speed in bits per 
-                                
+                                print(f"Speed bits: {(long_11 * 8) / x3:.5f}")
                                 # Convert elapsed time to string and return
                                 xs = str(xs)
                                 return xs
@@ -217,6 +218,8 @@ class compression:
                     Cot=0
                     Cot2=1
                     Cot3=0
+                    Block_Check_Add1=0
+                    Block_Check_Add2=0
                     
                     x = time()
                     File_information6_Times2_1=0
@@ -868,10 +871,11 @@ class compression:
                                                                                                                             
                                                                                                                                                                                         Z4+=Z2                                                            
                                                                                                                                                                                         #print(block)
+                                                                                                                                                                                        
                                                                                                                                                                                         #print(long_F)
                                                                                                                                                                                         
-                                                                                                                                                                                        if Block_Check_Add==block:
-                                                                                                                                                                                                                                                                                                File_information5_17=Check
+                                                                                                                                                                                        if Block_Check_Add==block or   Block_Check_Add >long_1:
+                                                                                                                                                                                                                                                                                                File_information5_17="00000000"+Check
                                                                                                                                                                                                                                                                                                 Ex=Check
                                                                                                                                                                                                                                                                                                 elapsed_time = process_file1(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
                                                                                                                                                                                                                                                                                                 return  elapsed_time  
@@ -1307,7 +1311,7 @@ class compression:
                                                                                                     #print(block)
                                                                                                     #print(long_F)
                                                                                                     
-                                                                                                    if Block_Check_Add==block:
+                                                                                                    if Block_Check_Add==block or   Block_Check_Add >long_1:
                                                                                                                Extract1=0
                                                                                                                File_information5_17=Ex
                                                                                                                elapsed_time = process_file(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
