@@ -765,6 +765,7 @@ class compression:
                                                                                                                                                     while Save!=1:
                                                                                                                                                                                   if Save==0:
                                                                                                                                                                                         C9=0
+                                                                                                                                                                                        Block_Check_Add=block
                                                                                                                                                                                       
                                                                                                                                                                                     
                                                                                                                                                                                         O=INFO[block:block+3]
@@ -867,7 +868,15 @@ class compression:
                                                                                                                             
                                                                                                                                                                                         Z4+=Z2                                                            
                                                                                                                                                                                         #print(block)
-                                                                                                                                                                                        #print(long_F)
+                                                                                                                                                                                        if Block_Check_Add >long_1*8:
+                                                                                                                                                                                                   File_information5_17=Check
+                                                                                                                                                                                          
+                                                                                                  
+                                                                                                                                                                                                   Ex=Check
+                                                                                                                                                                                                   elapsed_time = process_file1(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
+                                                                                                                                                                                                   return  elapsed_time                                                                                           
+                                                                                             
+                                                                                                                                                                                                                                                                                      #print(long_F)
                                                                                                                                                                                         if block>=long_F:
                                                                                                                                                                                             Save=1
                                                                                                                                                                                             #print(Save)
@@ -1296,6 +1305,8 @@ class compression:
                                                                                                     Z4+=Z2                                                            
                                                                                                     #print(block)
                                                                                                     #print(long_F)
+                                                                                                    
+                                                                                                    
                                                                                                     if block>=long_F:
                                                                                                         Save=1
                                                                                                         #print(Save)
