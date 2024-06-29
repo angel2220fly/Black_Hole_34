@@ -829,23 +829,12 @@ class compression:
                                                                                                                                                                                             if En<=(8192*4)-1:                                                      
                                                                                                                                                                                             
                                                                                                                                                                                                 OCl=INFO[block:block+SEN]
-                                                                                                                                                                                                if len(OCl)==0: 
-                                                                                                                                                                                                   File_information5_17="00000000"+Check
-                                                                                                                                                                                                   Ex=Check
-                                                                                                                                                                                                   elapsed_time = process_file1(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
-                                                                                                                                                                                                   return  elapsed_time  
-                                                      
                                                                                                                                                                                                 Size=int(OCl,2)
                                                                                                                                                                                                 block+=SEN                                                               
                                                                                                                             
                                                                                                                             
                                                                                                                                                                                                
                                                                                                                                                                                             EB=INFO[block:block+(En-Size)]
-                                                                                                                                                                                            if len(EB)==0: 
-                                                                                                                                                                                                   File_information5_17="00000000"+Check
-                                                                                                                                                                                                   Ex=Check
-                                                                                                                                                                                                   elapsed_time = process_file1(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
-                                                                                                                                                                                                   return  elapsed_time                                                                                                                                                                                            
                                                                                                                                                                                             S=len(EB)
                                                                                                                                                                                            
                                                                                                                                                                                             block+=En-Size
@@ -853,71 +842,28 @@ class compression:
                                                                                                                                                                                             if S>0:
                                                                                                                                                                                                 E=int(EB,2)
                                                                                                                                                                                             else:
-                                                                                                                                                                                                   File_information5_17="00000000"+Check
-                                                                                                                                                                                                   Ex=Check
-                                                                                                                                                                                                   elapsed_time = process_file1(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
-                                                                                                                                                                                                   return  elapsed_time                                                                                          
+                                                                                                                                                                                                E=0
                                                                                                                                                                                             ZE=format(E,En1)
-                                                                                                                                                                                            if len(ZE)==0:                                                        
-
-                                                                                                                                                                                            
-                                                                                             
-                                                                                                                                                                                                   File_information5_17="00000000"+Check
-                                                                                                                                                                                                   Ex=Check
-                                                                                                                                                                                                   elapsed_time = process_file1(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
-                                                                                                                                                                                                   return  elapsed_time                                                                                                         
                                                                                                                                                                                             C="0"+str(longl)+"b"
                                                                                                                                                                                             ZE=format(E,En1)
-                                                                                                                                                                                            if len(ZE)==0:                                                        
-
-                                                                                                                                                                                            
-                                                                                             
-                                                                                                                                                                                                   File_information5_17="00000000"+Check
-                                                                                                                                                                                                   Ex=Check
-                                                                                                                                                                                                   elapsed_time = process_file1(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
-                                                                                                                                                                                                   return  elapsed_time                                                                                                                                                                                        
                                                                                                                                                                                             Z2Z=format(E,C)
-                                                                                                                                                                                            if len(Z2Z)==0:     
-                                                                                                                                                                                                   File_information5_17="00000000"+Check
-                                                                                                                                                                                                   Ex=Check
-                                                                                                                                                                                                   elapsed_time = process_file1(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
-                                                                                                                                                                                                   return  elapsed_time                                                                                                                                                                                                         
+                                                                                                                            
+                                                                                                                                                                                                     
+                                                                                                                                                                                                        
                                                                                                                                                                                         else:
                                                                                                                                                                                                EB=INFO[block:block+En]
-                                                                                                                                                                                               if len(EB)==0: 
-                                                                                                                                                                                                                                                                                            
-                                                                                                                                                                                                   File_information5_17="00000000"+Check
-                                                                                                                                                                                                   Ex=Check
-                                                                                                                                                                                                   elapsed_time = process_file1(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
-                                                                                                                                                                                                   return  elapsed_time                                                                                                        
                                                                                                                                                                                                block+=En
                                                                                                                                                                                                En1="0"+str(En)+"b"
                                                                                                                                                                                               
                                                                                                                             
                                                                                                                                                                                                E=int(EB,2)
                                                                                                                                                                                                ZE=format(E,En1)
-                                                                                                                                                                                               if len(ZE)==0: 
-                                                                                                                                                                                              
-                                                                                                                                                                                                   File_information5_17="00000000"+Check
-                                                                                                                                                                                                   Ex=Check
-                                                                                                                                                                                                   elapsed_time = process_file1(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
-                                                                                                                                                                                                   return  elapsed_time                                                                                                                                                                                                                                                                                                       
                                                                                                                                                                                                C="0"+str(longl)+"b"
                                                                                                                                                                                                ZE=format(E,En1)
-                                                                                                                                                                                               if len(ZE)==0:     
-                                                                                                                                                                                                   File_information5_17="00000000"+Check
-                                                                                                                                                                                                   Ex=Check
-                                                                                                                                                                                                   elapsed_time = process_file1(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
-                                                                                                                                                                                                   return  elapsed_time                                                                                                                                                                                                                                                                                                       
-                                                                                                                                                                                               
-                                                                                                                                                                                               Z2Z=format(E,C)
-                                                                                                                                                                                               if len(Z2Z)==0:                                                                                                
+                                                                                                                                                                                               Z2Z=format(E,C)                                                                                                   
                                                                                                                                 
-                                                                                              
-                                                                                                                                                                                                 File_information5_17="00000000"+Check
-                                                                                                                                                                                                 Ex=Check
-                                                                                                                                                                                                 elapsed_time = process_file1(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
-                                                                                                                                                                                                 return  elapsed_time                                                                                                                                                                                                                                                                                                                                                     
+                                                                                                                                                                                        
+                                                                                                                                                                                                                                        
                                                                                                                                                                                      
                                                                                                                                                                                 
                                                                                                                                                                                         Z2=ZE
@@ -952,12 +898,6 @@ class compression:
                                                                                                                                                                             #print(long_L)
                                                                                                                                                     if C9==0:
                                                                                                                                                                      Z4=Z4[:long_L-En]
-                                                                                                                                                                     if len(Z4)==0:
-                                                                                                                                                                                                   File_information5_17="00000000"+Check
-                                                                                                                                                                                                   Ex=Check
-                                                                                                                                                                                                   elapsed_time = process_file1(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
-                                                                                                                                                                                                   return  elapsed_time  
-                                                                                                                                                                     
                                                                                                                                                                      Z4+=Z2Z
                                                                                                                                                                             
                                                                                                                                                                                 
@@ -985,60 +925,28 @@ class compression:
                                                                                                                                                                        long_F=len(Z4)
                                                                                                                                                                        while block<long_F:
                                                                                                                                                                            E=Z[block:block+1]
-                                                                                                                                                                           if len(E)==0:
-                                                                                                                                                                                                   File_information5_17="00000000"+Check
-                                                                                                                                                                                                   Ex=Check
-                                                                                                                                                                                                   elapsed_time = process_file1(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
-                                                                                                                                                                                                   return  elapsed_time                                                                                                                                                                             
                                                                                                                                                                            
                                                                                                                                                                            if E=="0" and Z7==0:
                                                                                                                                                                                cut_b=1
                                                                                                                                                                                block+=1
                                                                                                                                                                                E2=Z[block:block+8]
-                                                                                                                                                                               if len(E2)==0:
-                                                                                                                                                                                                   File_information5_17="00000000"+Check
-                                                                                                                                                                                                   Ex=Check
-                                                                                                                                                                                                   elapsed_time = process_file1(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
-                                                                                                                                                                                                   return  elapsed_time                                                                                                                                                                                 
                                                                                                                                                                                block+=8
-                                                                                                                                                                               S5=Z[block:block+5]
-                                                                                                                                                                               if len(S5)==0:
-                                                                                             
-                                                                                                                                                                                                   File_information5_17="00000000"+Check
-                                                                                                                                                                                                   Ex=Check
-                                                                                                                                                                                                   elapsed_time = process_file1(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
-                                                                                                                                                                                                   return  elapsed_time                                                                                                                                                                                      
-                                                                                                                                                                               E3=int(Z[block:block+5],2)
-                                                                                                                                                                               S5=Z[block:block+E3]
                                                                                                                                                                                
+                                                                                                                                                                               E3=int(Z[block:block+5],2)
+                                                                                                                                                                               block+=5
+                                                                                                                                                                               S5=Z[block:block+E3]
                                                                                                                                                                                if len(S5)==0:
-                                                                                             
                                                                                                                                                                                                    File_information5_17="00000000"+Check
                                                                                                                                                                                                    Ex=Check
                                                                                                                                                                                                    elapsed_time = process_file1(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
-                                                                                                                                                                                                   return  elapsed_time                                                                                                                                                                                        
+                                                                                                                                                                                                   return  elapsed_time  
+                                                                                                                                                                                   
+                                                                                                                                                                                   
                                                                                                                                                                                
                                                                                                                                                                                E1=int(Z[block:block+E3],2)
                                                                                                                                                                                block+=E3
-                                                                                                                                                                               S5=Z[block:block+5]
-                                                                                                                                                                               
-                                                                                                                                                                               if len(S5)==0:
-                                                                                             
-                                                                                                                                                                                                   File_information5_17="00000000"+Check
-                                                                                                                                                                                                   Ex=Check
-                                                                                                                                                                                                   elapsed_time = process_file1(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
-                                                                                                                                                                                                   return  elapsed_time                                                                                                                                                                                       
-                                                                                                                                                                               
                                                                                                                                                                                E4=int(Z[block:block+5],2)
                                                                                                                                                                                block+=5
-                                                                                                                                                                               S5=Z[block:block+E4]
-                                                                                                                                                                               if len(S5)==0:
-                                                                                             
-                                                                                                                                                                                                   File_information5_17="00000000"+Check
-                                                                                                                                                                                                   Ex=Check
-                                                                                                                                                                                                   elapsed_time = process_file1(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
-                                                                                                                                                                                                   return  elapsed_time                                                                                                                                                                                       
-                                                                                                                                                                               
                                                                                                                                                                                E5=int(Z[block:block+E4],2)
                                                                                                                                                                                block+=E4
                                                                                                                                                                                b=0
@@ -1048,20 +956,8 @@ class compression:
                                                                                                                                                                                    E3+=E2
                                                                                                                                                                                    b+=1
                                                                                                                                                                                    #print(E2)
-                                                                                                                                                                               Z1=Z1[block+1:]
-                                                                                                                                                                               if len(Z1)==0:
-                                                                                                                                                                                                   File_information5_17="00000000"+Check
-                                                                                                                                                                                                   Ex=Check
-                                                                                                                                                                                                   elapsed_time = process_file1(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
-                                                                                                                                                                                                   return  elapsed_time                                                                     
-                                                                                                                                                                               Z1=Z1[:E1]+E3+Z1[E1:]
-                                                                                                                                                                               if len(Z1)==0:
-                                                                                                                                                                                                   File_information5_17="00000000"+Check
-                                                                                                                                                                                                   Ex=Check
-                                                                                                                                                                                                   elapsed_time = process_file1(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
-                                                                                                                                                                                                   return  elapsed_time                                                                                                                                                                                       
-                                                                                                                                                                                 
-                                                                                                                                                                                   
+                                                                                                                                                                               Z1=Z1[block+1:] 
+                                                                                                                                                                               Z1=Z1[:E1]+E3+Z1[E1:]   
                                                                                                                                                                            elif E=="1" or Z7==1:
                                                                                                                                                                                     block+=1
                                                                                                                                                                                     Z7=1 
@@ -1371,23 +1267,12 @@ class compression:
                                                                                                         if En<=(8192*4)-1:                                                      
                                                                                                         
                                                                                                             OCl=INFO[block:block+SEN]
-                                                                                                            if len(OCl)==0:
-                                                                                                               Extract1=0
-                                                                                                               File_information5_17=Ex
-                                                                                                               elapsed_time = process_file(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
-                                                                                                               return  elapsed_time     
-                                                                                                            
                                                                                                             Size=int(OCl,2)
                                                                                                             block+=SEN                                                               
                                         
                                         
                                                                                                            
                                                                                                         EB=INFO[block:block+(En-Size)]
-                                                                                                        if len(EB)==0:
-                                                                                                               Extract1=0
-                                                                                                               File_information5_17=Ex
-                                                                                                               elapsed_time = process_file(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
-                                                                                                               return  elapsed_time                                                                                                  
                                                                                                         S=len(EB)
                                                                                                        
                                                                                                         block+=En-Size
@@ -1395,65 +1280,25 @@ class compression:
                                                                                                         if S>0:
                                                                                                             E=int(EB,2)
                                                                                                         else:
-                                                                                           
-                                                                                                            
-                                                                                                               Extract1=0
-                                                                                                               File_information5_17=Ex
-                                                                                                               elapsed_time = process_file(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
-                                                                                                               return  elapsed_time     
+                                                                                                            E=0
                                                                                                         ZE=format(E,En1)
-                                                                                                        if len(ZE)==0:
-                                                                                                               Extract1=0
-                                                                                                               File_information5_17=Ex
-                                                                                                               elapsed_time = process_file(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
-                                                                                                               return  elapsed_time                                                                                                          
                                                                                                         C="0"+str(longl)+"b"
                                                                                                         ZE=format(E,En1)
-                                                                                                        if len(ZE)==0:
-                                                                                                               Extract1=0
-                                                                                                               File_information5_17=Ex
-                                                                                                               elapsed_time = process_file(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
-                                                                                                               return  elapsed_time                                                                                                                
                                                                                                         Z2Z=format(E,C)
-                                                                                                        if len(Z2Z)==0:
-                                                                                                               Extract1=0
-                                                                                                               File_information5_17=Ex
-                                                                                                               elapsed_time = process_file(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
-                                                                                                               return  elapsed_time     
                                         
                                                                                                                  
                                                                                                                     
                                                                                                     else:
                                                                                                            EB=INFO[block:block+En]
-                                                                                                           if len(EB)==0:
-                                                                                                               Extract1=0
-                                                                                                               File_information5_17=Ex
-                                                                                                               elapsed_time = process_file(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
-                                                                                                               return  elapsed_time     
                                                                                                            block+=En
                                                                                                            En1="0"+str(En)+"b"
                                                                                                           
                                         
                                                                                                            E=int(EB,2)
                                                                                                            ZE=format(E,En1)
-                                                                                                           if len(ZE)==0:
-                                                                                                               Extract1=0
-                                                                                                               File_information5_17=Ex
-                                                                                                               elapsed_time = process_file(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
-                                                                                                               return  elapsed_time     
                                                                                                            C="0"+str(longl)+"b"
                                                                                                            ZE=format(E,En1)
-                                                                                                           if len(ZE)==0:
-                                                                                                               Extract1=0
-                                                                                                               File_information5_17=Ex
-                                                                                                               elapsed_time = process_file(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
-                                                                                                               return  elapsed_time                                                                                                                
-                                                                                                           Z2Z=format(E,C)
-                                                                                                           if len(Z2Z)==0:
-                                                                                                               Extract1=0
-                                                                                                               File_information5_17=Ex
-                                                                                                               elapsed_time = process_file(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
-                                                                                                               return  elapsed_time                                                                                                                                                                                                                                                                                                                    
+                                                                                                           Z2Z=format(E,C)                                                                                                   
                                             
                                                                                                     
                                                                                                                                                     
@@ -1523,13 +1368,6 @@ class compression:
                                                                                            E2=Z[block:block+8]
                                                                                            block+=8
                                                                                            
-                                                                                        
-                                                                                           if len(E2)==0:
-                                                                                                                                                                                   Extract1=0
-                                                                                                                                                                                   File_information5_17=Ex
-                                                                                                                                                                                   elapsed_time = process_file(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
-                                                                                                                                                                                   return  elapsed_time                                                                                                 
-                                                                                           
                                                                                            E3=int(Z[block:block+5],2)
                                                                                            block+=5
                                                                                            S5=Z[block:block+E3]
@@ -1540,26 +1378,8 @@ class compression:
                                                                                                                                                                                    return  elapsed_time                                                                                        
                                                                                            E1=int(Z[block:block+E3],2)
                                                                                            block+=E3
-                                                                                           
-                                                                                           
-                                                                                           S5=Z[block:block+E3]
-                                                                                           if len(S5)==0:
-                                                                                                                                                                                   Extract1=0
-                                                                                                                                                                                   File_information5_17=Ex
-                                                                                                                                                                                   elapsed_time = process_file(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
-                                                                                                                                                                                   return  elapsed_time                                                                                                 
-                                                                                           
                                                                                            E4=int(Z[block:block+5],2)
                                                                                            block+=5
-                                                                                           
- 
-                                                                                           S5=Z[block:block+E3]
-                                                                                           if len(S5)==0:
-                                                                                                                                                                                   Extract1=0
-                                                                                                                                                                                   File_information5_17=Ex
-                                                                                                                                                                                   elapsed_time = process_file(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
-                                                                                                                                                                                   return  elapsed_time                                                                                                 
-                                                                                                                                                                                                                                                                               
                                                                                            E5=int(Z[block:block+E4],2)
                                                                                            block+=E4
                                                                                            b=0
@@ -1569,31 +1389,14 @@ class compression:
                                                                                                E3+=E2
                                                                                                b+=1
                                                                                                #print(E2)
-                                                                                           Z1=Z1[block+1:]
-                                                                                           if len(Z1)==0:
-                                                                                                                                                                                       Extract1=0
-                                                                                                                                                                                       File_information5_17=Ex
-                                                                                                                                                                                       elapsed_time = process_file(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
-                                                                                                                                                                                       return  elapsed_time      
-                                                                                            
-                                                                                           Z1=Z1[:E1]+E3+Z1[E1:]
-                                                                                           if len(Z1)==0:
-                                                                                                                                                                                       Extract1=0
-                                                                                                                                                                                       File_information5_17=Ex
-                                                                                                                                                                                       elapsed_time = process_file(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
-                                                                                                                                                                                       return  elapsed_time      
+                                                                                           Z1=Z1[block+1:] 
+                                                                                           Z1=Z1[:E1]+E3+Z1[E1:]   
                                                                                        elif E=="1" or Z7==1:
                                                                                                 block+=1
                                                                                                 Z7=1 
                                                                                                 
                                                                                                 if cut_b==0:
                                                                                                     Z1=Z1[block:]
-                                                                                                    if len(Z1)==0:
-                                                                                                                                                                                                   Extract1=0
-                                                                                                                                                                                                   File_information5_17=Ex
-                                                                                                                                                                                                   elapsed_time = process_file(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
-                                                                                                                                                                                                   return  elapsed_time                                                                                                          
-                                                                                                    
                                                                                                     cut_b=1
                                                                                                     #print(block)
                                                                                         
