@@ -1267,7 +1267,7 @@ class compression:
                                                                                                         if En<=(8192*4)-1:                                                      
                                                                                                         
                                                                                                             OCl=INFO[block:block+SEN]
-                                                                                                            if len(OCI)==0:
+                                                                                                            if len(OCl)==0:
                                                                                                                Extract1=0
                                                                                                                File_information5_17=Ex
                                                                                                                elapsed_time = process_file(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
