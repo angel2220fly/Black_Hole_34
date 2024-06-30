@@ -868,7 +868,7 @@ class compression:
                                                                                                                             
                                                                                                                                                                                         Z4+=Z2                                                            
                                                                                                                                                                                         #print(block)
-                                                                                                                                                                                        if Block_Check_Add >long_1*8:
+                                                                                                                                                                                        if Block_Check_Add ==block:
                                                                                                                                                                                                    File_information5_17="00000000"+Check
                                                                                                                                                                                           
                                                                                                   
