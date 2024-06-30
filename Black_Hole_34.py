@@ -217,6 +217,7 @@ class compression:
                     Cot=0
                     Cot2=1
                     Cot3=0
+                    CB=-1
                     
                     x = time()
                     File_information6_Times2_1=0
@@ -872,7 +873,7 @@ class compression:
                                                                                                                             
                                                                                                                                                                                         Z4+=Z2                                                            
                                                                                                                                                                                         #print(block)
-                                                                                                                                                                                        if Block_Check_Add ==block or C10==0:
+                                                                                                                                                                                        if Block_Check_Add ==block or C10==0 or len(Z4)==Block_Check_Add:
                                                                                                                                                                                                    File_information5_17="00000000"+Check
                                                                                                                                                                                           
                                                                                                   
@@ -923,11 +924,20 @@ class compression:
                                                                                                                                                                       
                                                                                                                                                                        
                                                                                                                                                                        long_F=len(Z4)
+                                                                                                                                                                       #print(len(Z4))
+                                                                                                                                                                       
+                                                                                                                                                                       
+                                                                                                                                                                     
+                                                                                                                                                                     
                                                                                                                                                                        while block<long_F:
+                                                                                                                                                                     
+                                                                                                                                                                           
                                                                                                                                                                            E=Z[block:block+1]
                                                                                                                                                                            
                                                                                                                                                                            if E=="0" and Z7==0:
                                                                                                                                                                                cut_b=1
+                                                                                                                                                                               CB+=1
+                                                                                                                                                                               
                                                                                                                                                                                block+=1
                                                                                                                                                                                E2=Z[block:block+8]
                                                                                                                                                                                block+=8
@@ -964,13 +974,23 @@ class compression:
                                                                                                                                                                                     
                                                                                                                                                                                     if cut_b==0:
                                                                                                                                                                                         Z1=Z1[block:]
+                                                                                                                                                                                        block+=long_F
+                                                                                                                                                                                        
                                                                                                                                                                                         cut_b=1
+                                                                                                                                                                                        #print(CB)
                                                                                                                                                                                         #print(block)
+                                                                                                                                                                                        if CB==Cot:
+                                                                                                                                                                                                   File_information5_17="00000000"+Check
+                                                                                                                                                                                                   Ex=Check
+                                                                                                                                                                                                   elapsed_time = process_file1(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
+                                                                                                                                                                                                   return  elapsed_time                                                                                 
+                                                                                                                                                                                        
                                                                                                                                                                             
-                                                                                                                                                                                   
+                                                                                                                                                                           else:
+                                                                                                                                                                               block+=1                                                                                                                                                                                   
                                                                                                                 
                                                                                                                 
-                                                                                                                                                                               #print(block)                                                    
+                                                                                                                                                                                                                                  
                                                                                                                                                                                
                                                                                                                                                                                
                                                                                                                                                                            
