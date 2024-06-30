@@ -968,7 +968,7 @@ class compression:
                                                                                                                                                                                    #print(E2)
                                                                                                                                                                                Z1=Z1[block+1:] 
                                                                                                                                                                                Z1=Z1[:E1]+E3+Z1[E1:]   
-                                                                                                                                                                           elif E=="1" or Z7==1:
+                                                                                                                                                                           elif E=="1":
                                                                                                                                                                                     block+=1
                                                                                                                                                                                     Z7=1 
                                                                                                                                                                                     
