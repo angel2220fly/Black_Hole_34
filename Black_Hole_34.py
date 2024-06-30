@@ -929,12 +929,12 @@ class compression:
                                                                                                                                                                        
                                                                                                                                                                      
                                                                                                                                                                      
-                                                                                                                                                                       while block<long_F:
+                                                                                                                                                                       if N3==1:
                                                                                                                                                                      
                                                                                                                                                                            
                                                                                                                                                                            E=Z[block:block+1]
                                                                                                                                                                            
-                                                                                                                                                                           if E=="0" and Z7==0:
+                                                                                                                                                                           if E=="0":
                                                                                                                                                                                cut_b=1
                                                                                                                                                                                CB+=1
                                                                                                                                                                                
