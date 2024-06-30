@@ -762,7 +762,7 @@ class compression:
                                                                                                                                                     block=0
                                                                                                                                                     Save=0
                                                                                                                                                                
-                                                                                                                                                    while Save!=1:
+                                                                                                                                                    while block<len(INFO):
                                                                                                                                                                                   if Save==0:
                                                                                                                                                                                         C9=0
                                                                                                                                                                                         Block_Check_Add=block
@@ -1196,7 +1196,7 @@ class compression:
                                                                 block=0
                                                                 Save=0
                                                                            
-                                                                while Save!=1:
+                                                                while block<len(INFO):
                                                                                               if Save==0:
                                                                                                     C9=0
                                                                                                   
