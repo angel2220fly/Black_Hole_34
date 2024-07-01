@@ -214,9 +214,9 @@ class compression:
                     C2=0
                     C3=0
                     C4=0
-                    Cot=0
-                    Cot2=1
-                    Cot3=0
+                    Circle_times=0
+                    Circle_times2=1
+                    Circle_times3=0
                     CB=-1
                     
                     x = time()
@@ -325,10 +325,10 @@ class compression:
                                                     FC=0
                                                     IF2=""
                                                     Z7=0
-                                                    if Cot==0:
+                                                    if Circle_times==0:
                                                         SINFO=""
                                                         Z4=INFO
-                                                    if Cot==0:
+                                                    if Circle_times==0:
                                                         SINFO=INFO
                                                     
 
@@ -470,7 +470,7 @@ class compression:
                                                                                 elif En<=(8192*4)-1:
                                                                                     C1=format(C4,'015b')  
                                                                                     
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+
                                                                                 C2=format(longl,'06b') 
                                                                                                                                                             
         
@@ -591,15 +591,15 @@ class compression:
                                                                          
                                                                            #print(Long_PM1)
                                                                            N3=1
-                                                                           Cot+=1
-                                                                           #print(Cot)
+                                                                           Circle_times+=1
+                                                                           #print(Circle_times)
                                                                            #print(len(Z4))
                                                                            #print(long_11)
                                                                            INFO=CL2+CL1+Z4
                                                                         
                                                                            
-                                                                           if Cot==1:
-                                                                                                                                                                            Cot2=Cot
+                                                                           if Circle_times==1:
+                                                                                                                                                                            Circle_times2=Circle_times
                                                                                                                                                                             long_11=long_11*8
 
                                                                                
@@ -608,15 +608,15 @@ class compression:
                                                                            
                                                                            
                                                                            Extract1=0
-                                                                           if len(Z4)<=long_11 or Cot==255:
+                                                                           if len(Z4)<=long_11 or Circle_times==255:
                                                                                long_11=len(Z4)
                                                                             
                                                                                INFOS=INFO
                                                                              
                                                                           
-                                                                               Cot2=Cot
+                                                                               Circle_times2=Circle_times
                                                                                
-                                                                           if len(Z4)>long_11 or Cot>Cot2+1 or Cot==255:
+                                                                           if len(Z4)>long_11 or Circle_times>Circle_times2+1 or Circle_times==255:
                                                                                                                  
                                                                                                                  
                                                                                N3=2
@@ -625,13 +625,13 @@ class compression:
                                                                                
                                                                                                                                                     
                                                                            if N3==2:
-                                                                               Scot=format(Cot2,'08b')
-                                                                               if Cot==1:
-                                                                                   File_information5_17="1"+Scot+INFO
+                                                                               SCircle_times=format(Circle_times2,'08b')
+                                                                               if Circle_times==1:
+                                                                                   File_information5_17="1"+SCircle_times+INFO
                                                                                    
                                                                                    
-                                                                               if Cot!=1:
-                                                                                   File_information5_17="1"+Scot+INFOS                                                                                 
+                                                                               if Circle_times!=1:
+                                                                                   File_information5_17="1"+SCircle_times+INFOS                                                                                 
                                                                                N4=2
                                                                                if N4==2:                                                                             
                                                                                     
@@ -655,12 +655,12 @@ class compression:
                                                                                                                                                                                                                                                            Ex="00000000"+Check
                                                                                                                                                                                                                                                            File_information5_17=Ex
                                                                                                                                                                                                                                                            elapsed_time = process_file1(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)                                                                                            
-                                                                                                                                            Cot3=0
+                                                                                                                                            Circle_times3=0
                                                                                                                                             Extract1=0
-                                                                                                                                            Cot=0
+                                                                                                                                            Circle_times=0
                                                                                                                                                                                 
                                                                                      
-                                                                                                                                            if   Cot3==0:
+                                                                                                                                            if   Circle_times3==0:
                                                                                                                                                     long_16=len(File_information5)
                                                                                                     
                                                                                                                                                     if File_information5[:1]=="0":
@@ -672,10 +672,10 @@ class compression:
                                                                                                                                                     if File_information5[:1]=="1":
                                                                                                                                                         File_information5=File_information5[1:]
                                                                                                                                             INFO=File_information5         
-                                                                                                                                            if   Cot3==0:                
+                                                                                                                                            if   Circle_times3==0:                
                                                                                                                                         
-                                                                                                                                                        Cot4=int(INFO[:8],2)
-                                                                                                                                                        #print(Cot4)
+                                                                                                                                                        Circle_times4=int(INFO[:8],2)
+                                                                                                                                                        #print(Circle_times4)
                                                                                                                                                         INFO=INFO[8:]
                                                                                                                                                         
                                                                                                                                                         
@@ -995,14 +995,14 @@ class compression:
                                                                                                                                                                        #print(len(Z4))
                                                                                                                                                                         
                                                                                                                                                                        N3=1
-                                                                                                                                                                       Cot+=1
-                                                                                                                                                                       #print(Cot)
+                                                                                                                                                                       Circle_times+=1
+                                                                                                                                                                       #print(Circle_times)
                                                                                                                                                                        INFO=Z4
                                                                                                                                                                        Extract1=0
                                                                                                                                                                        N3=0
                                                                                                                                                                        #print(len(Z4))
-                                                                                                                                                                       #print(Cot4)
-                                                                                                                                                                       if Cot==Cot4:
+                                                                                                                                                                       #print(Circle_times4)
+                                                                                                                                                                       if Circle_times==Circle_times4:
                                                                                                                                                                            
                                                                                                                                                                            Extract1=1
                                                                                                                                                                            if Check==Z4:
@@ -1107,7 +1107,7 @@ class compression:
                                                                                                                                     return xs;                                                                                                 
                                                             
                                                         
-                                                        if   Cot3==0:
+                                                        if   Circle_times3==0:
                                                                 long_16=len(File_information5)
                 
                                                                 if File_information5[:1]=="0":
@@ -1119,10 +1119,10 @@ class compression:
                                                                 if File_information5[:1]=="1":
                                                                     File_information5=File_information5[1:]
                                                         INFO=File_information5         
-                                                        if   Cot3==0:                
+                                                        if   Circle_times3==0:                
                                                     
-                                                                    Cot4=int(INFO[:8],2)
-                                                                    #print(Cot4)
+                                                                    Circle_times4=int(INFO[:8],2)
+                                                                    #print(Circle_times4)
                                                                     INFO=INFO[8:]
                                                                     
                                                                     
@@ -1415,14 +1415,14 @@ class compression:
                                                                                    #print(len(Z4))
                                                                                     
                                                                                    N3=1
-                                                                                   Cot+=1
-                                                                                   #print(Cot)
+                                                                                   Circle_times+=1
+                                                                                   #print(Circle_times)
                                                                                    INFO=Z4
                                                                                    Extract1=0
                                                                                    N3=0
                                                                                    #print(len(Z4))
-                                                                                   #print(Cot4)
-                                                                                   if Cot==Cot4:
+                                                                                   #print(Circle_times4)
+                                                                                   if Circle_times==Circle_times4:
                                                                                        Extract1=1
                                                                                        N3=2
                                                                                        
@@ -1473,3 +1473,4 @@ class compression:
 d=compression()
 xw1=d.cryptograpy_compression4()
 print(xw1)
+
