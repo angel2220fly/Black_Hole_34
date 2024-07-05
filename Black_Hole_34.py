@@ -1395,6 +1395,7 @@ class compression:
                                                                                                 if cut_b==0:
                                                                                                     TUPLE1=TUPLE1[block:]
                                                                                                     cut_b=1
+                                                                                                    block+=long_F
                                                                                                     #print(block)
                                                                                         
                                                                                                
