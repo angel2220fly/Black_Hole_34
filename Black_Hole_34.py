@@ -970,7 +970,8 @@ class compression:
                                                                                                                                                                                    b+=1
                                                                                                                                                                                    #print(E2)
                                                                                                                                                                                TUPLE1=TUPLE1[block:] 
-                                                                                                                                                                               TUPLE1=TUPLE1[:E1]+E3+TUPLE1[E1:]   
+                                                                                                                                                                               TUPLE1=TUPLE1[:E1]+E3+TUPLE1[E1:]
+                                                                                                                                                                               block+=long_F                                                                                               
                                                                                                                                                                            elif E=="1":
                                                                                                                                                                                     block+=1
                                                                                                                                                                                     Z7=1 
