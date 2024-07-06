@@ -325,6 +325,7 @@ class compression:
                                                     FC=0
                                                     IF2=""
                                                     Z7=0
+                                                    CZ=0
                                                     if Circle_times==0:
                                                         SINFO=""
                                                         TUPLE=INFO
@@ -363,10 +364,13 @@ class compression:
                                                                                                                                                                  if FC<4:
                                                                                                                                                                      FC=0
                                                                                                                                                                  if Z7==0:
-                                                                                                                                                                    if FC<=255 and FC>=4 and len(bin(W)[2:])<16 or FC<=256*2-1 and FC>=5 and len(bin(W)[2:])<24 or FC<=256*3-1 and FC>=6  or FC<=256*3-1 and FC>=7 or  FC<=256*4-1 and FC>=8 or FC<=256*4-1 and FC>=9 or FC<=256*5-1 and FC>=10:
+                                                                                                                                                                    if FC>=2:
+                                                                           
+                                                                                                                                                                        
                                                                                                                                                                     
                                                                                                                                                                     
                                                                                                                                                                      Z7=1
+                                                                                                                                                                     CZ=1
                                                                                                                                                                      W1=block-16
     
                                                                                                                                                                      Sw1=format(W,'01b')
@@ -381,8 +385,12 @@ class compression:
                                                                                                                                                                      
                                                                                                                                                      
                                                                                                                                                                                                                                                                              
-                                                                                                                                                                                                                                                                                                                                                        
-                                                    W5=W3+"1"
+                                                                                                                                                                                                                                                                                                                                                         
+                                                    if CZ==0:
+                                                        W5=W3+"1"
+                                                
+                                                    elif CZ==1:
+                                                        W5=W3
 
                                                     W4=W5+W4
                                                     INFO=W4
@@ -577,6 +585,7 @@ class compression:
                                                                     W="0"+str(len(C1))+"b"
                                                                     CL1=format(longl,W)        
                                                                     CL2=format(En,'015b')
+                                                                  
                                                                 
                                                                     
                                                                  
@@ -682,7 +691,7 @@ class compression:
                                                                                                                                                         
                                                                                                                                             while Extract1!=1:
                                                                                                                                                     
-                                                                                                                                                    
+                                                                                                                                                                                                   
                                                                                                                                                         
                                                                                                                                                     En=int(INFO[:15],2)
                                                                                                                                                         #print(longl)
@@ -960,7 +969,7 @@ class compression:
                                                                                                                                                                                    E3+=E2
                                                                                                                                                                                    b+=1
                                                                                                                                                                                    #print(E2)
-                                                                                                                                                                               TUPLE1=TUPLE1[block+1:] 
+                                                                                                                                                                               TUPLE1=TUPLE1[block:] 
                                                                                                                                                                                TUPLE1=TUPLE1[:E1]+E3+TUPLE1[E1:]   
                                                                                                                                                                            elif E=="1":
                                                                                                                                                                                     block+=1
@@ -1129,7 +1138,7 @@ class compression:
                                                                     
                                                         while Extract1!=1:
                                                                 
-                                                                
+                                                                                                                               
                                                                     
                                                                 En=int(INFO[:15],2)
                                                                     #print(longl)
@@ -1386,8 +1395,9 @@ class compression:
                                                                                                E3+=E2
                                                                                                b+=1
                                                                                                #print(E2)
-                                                                                           TUPLE1=TUPLE1[block+1:] 
-                                                                                           TUPLE1=TUPLE1[:E1]+E3+TUPLE1[E1:]   
+                                                                                           TUPLE1=TUPLE1[block:] 
+                                                                                           TUPLE1=TUPLE1[:E1]+E3+TUPLE1[E1:]
+                                                                                           block+=long_F   
                                                                                        elif E=="1" or Z7==1:
                                                                                                 block+=1
                                                                                                 Z7=1 
