@@ -815,7 +815,7 @@ class compression:
                                                                                                                                                                                           
                                                                                                                                                                                                
                                                                                                                                                                                                ZE="01"+ZE 
-                                                                                                                                                                                               Z2Z="01"+Z2Z
+                                                                                                                                                                                               
                                                                                                                                                                                                block+=En-2                                                                                   
                                                                                                                             
                                                                                                                                                                                                  
