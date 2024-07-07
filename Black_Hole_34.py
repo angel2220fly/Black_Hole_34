@@ -686,6 +686,7 @@ class compression:
                                                                                                                                                         Circle_times4=int(INFO[:8],2)
                                                                                                                                                         #print(Circle_times4)
                                                                                                                                                         INFO=INFO[8:]
+                                                                                                                                                        Z2Z="'"
                                                                                                                                                         
                                                                                                                                                         
                                                                                                                                                         
@@ -814,8 +815,8 @@ class compression:
                                                                                                                                                                                                
                                                                                                                                                                                           
                                                                                                                                                                                                
-                                                                                                                                                                                               ZE="01"+ZE 
-                                                                                                                                                                                               
+                                                                                                                                                                                               ZE="01"+ZE
+                                                                                                                                                                                               Z2Z="01"+Z2Z                                                                                                                                                                                      
                                                                                                                                                                                                block+=En-2                                                                                   
                                                                                                                             
                                                                                                                                                                                                  
@@ -1134,6 +1135,7 @@ class compression:
                                                                     Circle_times4=int(INFO[:8],2)
                                                                     #print(Circle_times4)
                                                                     INFO=INFO[8:]
+                                                                    Z2Z=""
                                                                     
                                                                     
                                                                     
