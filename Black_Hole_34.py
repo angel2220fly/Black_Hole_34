@@ -1136,7 +1136,7 @@ class compression:
                                                                     Circle_times4=int(INFO[:8],2)
                                                                     #print(Circle_times4)
                                                                     INFO=INFO[8:]
-                                                                    Z2Z=""
+                                                                    
                                                                     
                                                                     
                                                                     
