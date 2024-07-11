@@ -882,13 +882,7 @@ class compression:
                                                                                                                             
                                                                                                                                                                                         TUPLE+=Z2                                                            
                                                                                                                                                                                         #print(block)
-                                                                                                                                                                                        if Block_Check_Add ==block or C10==0 or len(TUPLE)==Block_Check_Add:
-                                                                                                                                                                                                   File_information5_17="00000000"+Check
-                                                                                                                                                                                          
-                                                                                                  
-                                                                                                                                                                                                   Ex=Check
-                                                                                                                                                                                                   elapsed_time = process_file1(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
-                                                                                                                                                                                                   return  elapsed_time                                                                                           
+                                                                                                                                                                                    
                                                                                              
                                                                                                                                                                                                                                                                                       #print(long_F)
                                                                                                                                                                                         if block>=long_F:
