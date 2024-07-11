@@ -902,7 +902,7 @@ class compression:
                                                                                                                                                                                                                                                                                                                     
                                                                                                                                                     long_L=len(TUPLE)
                                                                                                                                                                             #print(long_L)
-                                                                                                                                                    if C9==0:
+                                                                                                                                                    if C9==0 and  (long_L-En)>=0:
                                                                                                                                                                      TUPLE=TUPLE[:long_L-En]
                                                                                                                                                                      TUPLE+=ZEROS_ONE_1
                                                                                                                                                                             
@@ -1342,7 +1342,7 @@ class compression:
                                                                                                                                                                                                                                 
                                                                 long_L=len(TUPLE)
                                                                                         #print(long_L)
-                                                                if C9==0:
+                                                                if C9==0 and (long_L-En)>=0:
                                                                                  TUPLE=TUPLE[:long_L-En]
                                                                                  TUPLE+=ZEROS_ONE_1
                                                                                         
