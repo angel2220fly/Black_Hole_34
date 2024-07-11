@@ -546,6 +546,7 @@ class compression:
                                                                                                                                                                                                                                                                                                                                                                                     
                                                                                                                                                                                                                                                                                                                                                                                     
                                                                         elif len(TUPLE)+8+13+8+len(C1) < long_11*8 and len(C1)!=0:
+                                                                      
                                                                             
                                                                             
                                                                             input_string+= "En="+str(En)+", "+"Longl_F="+str(len(TUPLE))+" / "
@@ -790,6 +791,7 @@ class compression:
                                                                                                                                                                                                block+=3
                                                                                                                                                                                                OC=INFO[block:block+En-2]
                                                                                                                                                                                                C10=1
+                                                                                                                                                                                               C9=1
                                                                                                                                                                                                if len(OC)==0:
                                                                                                                                                                                                                                                        
                                                                                                                                                                                                                                                            File_information5_17="00000000"+Check
@@ -799,6 +801,7 @@ class compression:
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
                                                                                                                                                                                                E=int(OC,2)
                                                                                                                                                                                                Row1="0"+str(En-2)+"b"
+                                                                                                                                                                                               
                                                                                                                                                                                                
                                                                                                                                                                                                ZEROS_ONES=format(E,Row1)
                                                                                                                                                                                                if len(ZEROS_ONES)==0:
@@ -859,6 +862,7 @@ class compression:
                                                                                                                                                                                         else:
                                                                                                                                                                                                EB=INFO[block:block+En]
                                                                                                                                                                                                C10=1
+                                                                                                                                                                                               
                                                                                                                                                                                                block+=En
                                                                                                                                                                                                Row1="0"+str(En)+"b"
                                                                                                                                                                                               
@@ -905,8 +909,11 @@ class compression:
                                                                                                                                                     if C9==0 and  (long_L-En)>=0:
                                                                                                                                                                      TUPLE=TUPLE[:long_L-En]
                                                                                                                                                                      TUPLE+=ZEROS_ONE_1
-                                                                                                                                                                            
-                                                                                                                                                                                
+
+                                                                                                                                                    elif C9==1 and  (long_L-2-En)>=0:
+                                                                                                                                                                     TUPLE=TUPLE[:long_L-2-En]
+                                                                                                                                                                     TUPLE+=ZEROS_ONE_1                                                                                                                                                                                          
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
                                                                                                                                                     N3=1
                                                                                                                                                                             
                                                                                                                                                                            
@@ -1244,6 +1251,7 @@ class compression:
                                                                                                                return  elapsed_time                                                                                                                
                                                                                                            E=int(OC,2)
                                                                                                            Row1="0"+str(En-2)+"b"
+                                                                                                           C9=1
                                                                                                            
                                                                                                            ZEROS_ONES=format(E,Row1)
                                                                                                            if len(ZEROS_ONES)==0:
@@ -1346,7 +1354,9 @@ class compression:
                                                                                  TUPLE=TUPLE[:long_L-En]
                                                                                  TUPLE+=ZEROS_ONE_1
                                                                                         
-                                                                                            
+                                                                elif C9==1 and (long_L-2-En)>=0:
+                                                                                 TUPLE=TUPLE[:long_L-2-En]
+                                                                                 TUPLE+=ZEROS_ONE_1                                                                                            
                                                                 N3=1
                                                                                         
                                                                                        
