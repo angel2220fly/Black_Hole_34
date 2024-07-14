@@ -362,7 +362,7 @@ class compression:
                                                           
                                                                                                                                                          if IF1!=IF:
                                                                                                                                                                
-                                                                                                                                                                 if FC<4:
+                                                                                                                                                                 if FC<2:
                                                                                                                                                                      FC=0
                                                                                                                                                                  if Z7==0:
                                                                                                                                                                     if FC>=2:
