@@ -1,4 +1,5 @@
-import os  
+import os
+import sys
 from time import time
 import binascii
 import math
@@ -9,16 +10,17 @@ add_bits=""
 
 
 
-# Specify the path to your file
-file_path = 'Black_Hole_34.py'
+# Get the name of the current script
+current_script = os.path.basename(sys.argv[0])
 
-# Check if the file exists
-if os.path.exists(file_path):
-    # Get the name of the file
-    file_name = os.path.basename(file_path)
-    print(f"The file name is: {file_name}")
+# Print the name of the current running script
+print(f"The current running script is: {current_script}")
+
+# Check if the running script is 'Black_Hole_34.py'
+if current_script == 'Black_Hole_34.py':
+    print("The script 'Black_Hole_34.py' is currently running.")
 else:
-    print(f"The file at {file_path} does not exist.")
+    print("This is not 'Black_Hole_34.py'.")
     raise SystemExit
 
 #@Author Jurijus Pacalovas
