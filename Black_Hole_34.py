@@ -9,6 +9,18 @@ add_bits=""
 
 
 
+# Specify the path to your file
+file_path = 'Black_Hole_34.py'
+
+# Check if the file exists
+if os.path.exists(file_path):
+    # Get the name of the file
+    file_name = os.path.basename(file_path)
+    print(f"The file name is: {file_name}")
+else:
+    print(f"The file at {file_path} does not exist.")
+    raise SystemExit
+
 #@Author Jurijus Pacalovas
 class compression:
         def cryptograpy_compression4(self):
@@ -362,7 +374,7 @@ class compression:
                                                           
                                                                                                                                                          if IF1!=IF:
                                                                                                                                                                
-                                                                                                                                                                 if FC<2:
+                                                                                                                                                                 if FC<4:
                                                                                                                                                                      FC=0
                                                                                                                                                                  if Z7==0:
                                                                                                                                                                     if FC>=2:
