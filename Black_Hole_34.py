@@ -4,7 +4,7 @@ import binascii
 import math
 import os.path
 import sys
-
+#@Author Jurijus Pacalovas
 # Get the name of the current script
 current_script = os.path.basename(sys.argv[0])
 
@@ -20,7 +20,7 @@ else:
 
 
 
-#@Author Jurijus Pacalovas
+
 class compression:
         def cryptograpy_compression4(self):
               
