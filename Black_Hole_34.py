@@ -1,14 +1,9 @@
-import os
-import sys
+import os  
 from time import time
 import binascii
 import math
 import os.path
-long_1=0
-name=""
-add_bits=""
-
-
+import sys
 
 # Get the name of the current script
 current_script = os.path.basename(sys.argv[0])
@@ -22,6 +17,8 @@ if current_script == 'Black_Hole_34.py':
 else:
     print("This is not 'Black_Hole_34.py'.")
     raise SystemExit
+
+
 
 #@Author Jurijus Pacalovas
 class compression:
@@ -376,7 +373,7 @@ class compression:
                                                           
                                                                                                                                                          if IF1!=IF:
                                                                                                                                                                
-                                                                                                                                                                 if FC<4:
+                                                                                                                                                                 if FC<2:
                                                                                                                                                                      FC=0
                                                                                                                                                                  if Z7==0:
                                                                                                                                                                     if FC>=2:
