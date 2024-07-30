@@ -635,7 +635,7 @@ class compression:
                                                                            
                                                                            
                                                                            Extract1=0
-                                                                           if len(TUPLE)<=long_11 or Circle_times==255:
+                                                                           if len(TUPLE)<=long_11 or Circle_times==15:
                                                                                long_11=len(TUPLE)
                                                                             
                                                                                INFOS=INFO
@@ -643,7 +643,7 @@ class compression:
                                                                           
                                                                                Circle_times2=Circle_times
                                                                                
-                                                                           if len(TUPLE)>long_11 or Circle_times>Circle_times2+1 or Circle_times==255:
+                                                                           if len(TUPLE)>long_11 or Circle_times>Circle_times2+1 or Circle_times==15:
                                                                                                                  
                                                                                                                  
                                                                                N3=2
@@ -652,7 +652,7 @@ class compression:
                                                                                
                                                                                                                                                     
                                                                            if N3==2:
-                                                                               SCircle_times=format(Circle_times2,'08b')
+                                                                               SCircle_times=format(Circle_times2,'04b')
                                                                                if Circle_times==1:
                                                                                    File_information5_17="1"+SCircle_times+INFO
                                                                                    
@@ -701,9 +701,9 @@ class compression:
                                                                                                                                             INFO=File_information5         
                                                                                                                                             if   Circle_times3==0:                
                                                                                                                                         
-                                                                                                                                                        Circle_times4=int(INFO[:8],2)
+                                                                                                                                                        Circle_times4=int(INFO[:4],2)
                                                                                                                                                         #print(Circle_times4)
-                                                                                                                                                        INFO=INFO[8:]
+                                                                                                                                                        INFO=INFO[4:]
                                                                                                                                                      
                                                                                                                                                         
                                                                                                                                                         
@@ -1151,9 +1151,9 @@ class compression:
                                                         INFO=File_information5         
                                                         if   Circle_times3==0:                
                                                     
-                                                                    Circle_times4=int(INFO[:8],2)
+                                                                    Circle_times4=int(INFO[:4],2)
                                                                     #print(Circle_times4)
-                                                                    INFO=INFO[8:]
+                                                                    INFO=INFO[4:]
                                                                     
                                                                     
                                                                     
