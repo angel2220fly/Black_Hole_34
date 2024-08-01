@@ -452,45 +452,8 @@ class compression:
                                                                                 C=format(Counts,'01b')
                                                                                 C4=En-len(C)
                                                                                 
-                                                                                
-                                                                                                                                                                 
-                                                                                if En<=7:
-                                                                                    C1=format(C4,'03b')                                                                                             
-                                                                                elif En<=15:
-                                                                                    C1=format(C4,'04b')
-                                                                                    
-                                                                                    
-                                                                                elif En<=31:
-                                                                                    C1=format(C4,'05b')
-                                                                                    
-                                                                                elif En<=63:
-                                                                                    C1=format(C4,'06b')                                                                           
-                                                                                elif En<=127:
-                                                                                    C1=format(C4,'07b')                                                                                                                                                                     
-    
-                                                                                elif En<=255:
-                                                                                    C1=format(C4,'08b') 
-                                                                                    
-                                                                                elif En<=511:
-                                                                                    C1=format(C4,'09b')                                                                                                         
-                                                                                    
-                                                                                elif En<=1023:
-                                                                                    C1=format(C4,'010b')   
-                                                                                    
-                                                                                elif En<=2047:
-                                                                                    C1=format(C4,'011b')  
-                                                                                    
-                                                                                elif En<=4095:
-                                                                                    C1=format(C4,'012b')                                                                                                                                                                                                                                                                        
-                                                                                elif En<=8191:
-                                                                                    C1=format(C4,'013b') 
-                                                                                    
-                                                                                elif En<=(8192*2)-1:
-                                                                                    C1=format(C4,'014b')                                                                                                      
-                                                                                elif En<=(8192*4)-1:
-                                                                                    C1=format(C4,'015b')  
-                                                                                    
-
+                                                                                bit_width = math.ceil(math.log2(En + 1))
+                                                                                C1 = format(C4, f'0{bit_width}b')
                                                                                 C2=format(longl,'06b') 
                                                                                                                                                             
         
