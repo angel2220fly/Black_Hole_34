@@ -712,70 +712,14 @@ class compression:
                                                                                                                                                     INFO=INFO[15:]
                                                                                                                                                     En2=0
                                                                                                                                                     
-                                                                                                                                                    if En<=7:
-                                                                                                                                                        longl=int(INFO[:3],2)
-                                                                                                                                                        #print(longl)
-                                                                                                                                                        INFO=INFO[3:]
-                                                                                                                                                        SEN=3  
+                                                                                                                                                    for i in range(3, 16):
+                                                                                                                                                    	if En <= (2**i) - 1:
+                                                                                                                                                    		longl = int(INFO[:i], 2)
+                                                                                                                                                    		INFO = INFO[i:]
+                                                                                                                                                    		SEN = i
+                                                                                                                                                    		break
                                                                                                                                                     
-                                                                                                                                                    if En<=15:
-                                                                                                                                                        longl=int(INFO[:4],2)
-                                                                                                                                                        #print(longl)
-                                                                                                                                                        INFO=INFO[4:]
-                                                                                                                                                        SEN=4     
-                                                                                                                                                    
-                                                                                                                                                    elif En<=31:
-                                                                                                                                                        longl=int(INFO[:5],2)
-                                                                                                                                                        #print(longl)
-                                                                                                                                                        INFO=INFO[5:]
-                                                                                                                                                        SEN=5                                  
-                                                                                                                                                    elif En<=63:
-                                                                                                                                                        longl=int(INFO[:6],2)
-                                                                                                                                                        INFO=INFO[6:]
-                                                                                                                                                        SEN=6 
-                                                                                                                                                        
-                                                                                                                                                    elif En<=127:
-                                                                                                                                                        longl=int(INFO[:7],2)
-                                                                                                                                                        INFO=INFO[7:]
-                                                                                                                                                        SEN=7                                       
-                                                                                                                                                                                                                                  
-                                                                                                                                                    elif En<=255:
-                                                                                                                                                        longl=int(INFO[:8],2) 
-                                                                                                                                                        INFO=INFO[8:]  
-                                                                                                                                                        SEN=8                                      
-                                                                                                                                                                                                
-                                                                                                                                                                                                                                                                                
-                                                                                                                                                    elif En<=511:
-                                                                                                                                                        longl=int(INFO[:9],2) 
-                                                                                                                                                        INFO=INFO[9:]
-                                                                                                                                                        SEN=9                                       
-                                                                                                                                                    elif En<=1023:
-                                                                                                                                                        longl=int(INFO[:10],2) 
-                                                                                                                                                        INFO=INFO[10:]
-                                                                                                                                                        SEN=10                                                                                                                            
-                                                                                                                                                    elif En<=2047:
-                                                                                                                                                        longl=int(INFO[:11],2) 
-                                                                                                                                                        INFO=INFO[11:]
-                                                                                                                                                        SEN=11                     
-                                                                                                                     
-                                                                                                                                                    elif En<=4095:
-                                                                                                                                                        longl=int(INFO[:12],2) 
-                                                                                                                                                        INFO=INFO[12:]
-                                                                                                                                                        SEN=12
-                                                                                                                                                        
-                                                                                                                                                        
-                                                                                                                                                    elif En<=8191:
-                                                                                                                                                        longl=int(INFO[:13],2) 
-                                                                                                                                                        INFO=INFO[13:]
-                                                                                                                                                        SEN=13                                                                                   
-                                                                                                                                                    elif En<=(8192*2)-1:
-                                                                                                                                                        longl=int(INFO[:14],2) 
-                                                                                                                                                        INFO=INFO[14:]
-                                                                                                                                                        SEN=14                                                                                                                                                                       
-                                                                                                                                                    elif En<=(8192*4)-1:
-                                                                                                                                                        longl=int(INFO[:15],2) 
-                                                                                                                                                        INFO=INFO[15:]
-                                                                                                                                                        SEN=15                                   
+                           
                                                                                                                                                                
                                                                                                                                                     
                                                                                                                                                     Extract1=0
@@ -1160,71 +1104,12 @@ class compression:
                                                                     #print(longl)
                                                                 INFO=INFO[15:]
                                                                 En2=0
-                                                                
-                                                                if En<=7:
-                                                                    longl=int(INFO[:3],2)
-                                                                    #print(longl)
-                                                                    INFO=INFO[3:]
-                                                                    SEN=3  
-                                                                
-                                                                if En<=15:
-                                                                    longl=int(INFO[:4],2)
-                                                                    #print(longl)
-                                                                    INFO=INFO[4:]
-                                                                    SEN=4     
-                                                                
-                                                                elif En<=31:
-                                                                    longl=int(INFO[:5],2)
-                                                                    #print(longl)
-                                                                    INFO=INFO[5:]
-                                                                    SEN=5                                  
-                                                                elif En<=63:
-                                                                    longl=int(INFO[:6],2)
-                                                                    INFO=INFO[6:]
-                                                                    SEN=6 
-                                                                    
-                                                                elif En<=127:
-                                                                    longl=int(INFO[:7],2)
-                                                                    INFO=INFO[7:]
-                                                                    SEN=7                                       
-                                                                                                                                              
-                                                                elif En<=255:
-                                                                    longl=int(INFO[:8],2) 
-                                                                    INFO=INFO[8:]  
-                                                                    SEN=8                                      
-                                                                                                            
-                                                                                                                                                                                            
-                                                                elif En<=511:
-                                                                    longl=int(INFO[:9],2) 
-                                                                    INFO=INFO[9:]
-                                                                    SEN=9                                       
-                                                                elif En<=1023:
-                                                                    longl=int(INFO[:10],2) 
-                                                                    INFO=INFO[10:]
-                                                                    SEN=10                                                                                                                            
-                                                                elif En<=2047:
-                                                                    longl=int(INFO[:11],2) 
-                                                                    INFO=INFO[11:]
-                                                                    SEN=11                     
-                                 
-                                                                elif En<=4095:
-                                                                    longl=int(INFO[:12],2) 
-                                                                    INFO=INFO[12:]
-                                                                    SEN=12
-                                                                    
-                                                                    
-                                                                elif En<=8191:
-                                                                    longl=int(INFO[:13],2) 
-                                                                    INFO=INFO[13:]
-                                                                    SEN=13                                                                                   
-                                                                elif En<=(8192*2)-1:
-                                                                    longl=int(INFO[:14],2) 
-                                                                    INFO=INFO[14:]
-                                                                    SEN=14                                                                                                                                                                       
-                                                                elif En<=(8192*4)-1:
-                                                                    longl=int(INFO[:15],2) 
-                                                                    INFO=INFO[15:]
-                                                                    SEN=15                                   
+                                                                for i in range(3, 16):
+                                                                                                                                                    		if En <= (2**i) - 1:
+                                                                                                                                                    			longl = int(INFO[:i], 2)
+                                                                                                                                                    			INFO = INFO[i:]
+                                                                                                                                                    			SEN = i
+                                                                                                                                                    			break                               
                                                                            
                                                                 
                                                                 Extract1=0
