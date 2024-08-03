@@ -1,31 +1,16 @@
 import os  
-
 from time import time
-
 import binascii
-
 import math
-
 import os.path
-
 import sys
-
 #@Author Jurijus Pacalovas
-
 # Get the name of the current script
 
-import os, sys
-
-if os.path.basename(sys.argv[0]) != 'Black_Hole_34.py':
+import os, sysename(sys.argv[0]) != 'Black_Hole_34.py':
     sys.exit("This is not 'Black_Hole_34.py'.")
 
 print("The script 'Black_Hole_34.py' is currently running.")
-
-
-
-
-
-
 
 
 class compression:
@@ -42,16 +27,12 @@ class compression:
                 			f2.write(binascii.unhexlify(("%0" + str((len(File_information5_17) // 8) * 2) + "x") % int(File_information5_17, 2)))
                 			return str(time() - x)
                
-
-
                 def process_file(Extract1=0, File_information5_17="Ex", name="", x=0):
                 	if Extract1 == 1:
                 		width_bits = ("%0" + str((len(File_information5_17) // 8) * 2) + "x") % int(File_information5_17, 2)
                 		with open(name[:-2], "wb") as f2:
                 			f2.write(binascii.unhexlify(width_bits))
                 			return str(time() - x)
-
-
                 def Count_adds(M1,En,Row1,Row):
                         
                         Row+=1
@@ -105,11 +86,7 @@ class compression:
 
              
 
-                import re                    
-
-               
-
-                                
+                import re                                           
 
                 def find_smallest_longl_F_values(input_string):
 
@@ -139,57 +116,11 @@ class compression:
 
                         return None
 
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                  
-
-                
-
-  
-
-                
-
-
-
-                                     
-
-                  
-
-                                                                      
-
-                                   
-
-                        
-
-
-
                 self.name = "Written: Jurijus pacalovas"
 
                 N5=1
 
                 if N5==1:
-
-
-
-                
-
-                
-
-                
 
                     Clear=""
 
@@ -214,33 +145,6 @@ class compression:
                         i=1
 
                     #print(i)
-
-
-
- 
-
-    
-
-                 
-
-               
-
-                       
-
-
-
-                    
-
-                
-
-                    
-
-                    
-
-        
-
-                    
-
                     if os.path.exists(name):
 
                             print('Path is exists!')
@@ -252,45 +156,24 @@ class compression:
                             raise SystemExit
 
                     x=0
-
                     C1=1
-
                     x1=0
-
                     x2=0
-
                     x3=0
-
                     X2=0
-
                     C1=0
-
                     C2=0
-
                     C3=0
-
                     C4=0
-
                     ZEROS_ONE_1=""
-
                     Circle_times=0
-
                     Circle_times2=1
-
                     Circle_times3=0
-
                     CB=-1
-
-                    
-
                     x = time()
-
                     File_information6_Times2_1=0
-
                     name_2=name
-
                     Long_Change=len(name_2)
-
                     compress_or_not_compress=1
 
                     File_information6_Times3=0
@@ -300,29 +183,16 @@ class compression:
                         C=1
 
                     Long_Change=len(name_2)
-
                     s=""
-
                     File_information5=""
-
                     File_information5_2=""
-
                     Clear=""
-
                     Translate_info_Decimal=""
-
                     D=0
-
                     long_name=len(name)
-
-           
-
                     with open(name, "rb") as binary_file:
 
                         data = binary_file.read()
-
-
-
                         s=str(data)
 
                         long_11=len(data)
@@ -2518,7 +2388,5 @@ class compression:
                                                             
 
 d=compression()
-
 xw1=d.cryptograpy_compression4()
-
 print(xw1)
