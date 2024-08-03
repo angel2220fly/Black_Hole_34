@@ -9,14 +9,6 @@ if os.path.basename(sys.argv[0]) != 'Black_Hole_34.py':
     sys.exit("This is not 'Black_Hole_34.py'.")
 
 print("The script 'Black_Hole_34.py' is currently running.")
-
-
-
-
-
-
-
-
 class compression:
 
         def cryptograpy_compression4(self):
