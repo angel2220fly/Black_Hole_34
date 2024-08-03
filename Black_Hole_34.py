@@ -7,7 +7,7 @@ import sys
 #@Author Jurijus Pacalovas
 # Get the name of the current script
 
-import os, sysename(sys.argv[0]) != 'Black_Hole_34.py':
+if os.path.basename(sys.argv[0]) != 'Black_Hole_34.py':
     sys.exit("This is not 'Black_Hole_34.py'.")
 
 print("The script 'Black_Hole_34.py' is currently running.")
@@ -290,12 +290,7 @@ class compression:
                                     Extact=File_information5_2
 
                                     A=int(Extact,2)                                    
-
-                                
-
-                                        
-
-                                    long_13=len(File_information5_2)
+                                long_13=len(File_information5_2)
 
                                 long_12=len(File_information5_2)
 
