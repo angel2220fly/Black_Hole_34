@@ -57,7 +57,7 @@ class compression:
                 En = 255
 
             return M1, En, Row1, Row
-
+        #En - intersection points
         def Count_adds(M1, En, Row1, Row):
 
             Row += 1
@@ -323,6 +323,7 @@ class compression:
                                 long_F = len(I8)
 
                                 # print(long_F)
+                                #find circle
 
                                 FC = 0
 
@@ -381,6 +382,7 @@ class compression:
                                                 Z7 = 1
 
                                                 CZ = 1
+                                                #positin_find_width_bytes
 
                                                 W1 = block - 16
 
