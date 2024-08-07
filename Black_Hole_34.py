@@ -444,37 +444,8 @@ class compression:
 
                                         # print(C1)
 
-                                        if (
-                                            C3 >= 3 + 3
-                                            and En <= 7
-                                            or C3 >= 4 + 3
-                                            and En <= 15
-                                            or C3 >= 5 + 3
-                                            and En <= 31
-                                            or C3 >= 6 + 3
-                                            and En <= 63
-                                            or C3 >= 7 + 3
-                                            and En <= 127
-                                            or C3 >= 8 + 3
-                                            and En <= 255
-                                            or C3 >= 9 + 3
-                                            and En <= 511
-                                            or C3 >= 10 + 3
-                                            and En <= 1023
-                                            or C3 >= 11 + 3
-                                            and En <= 2047
-                                            or C3 >= 12 + 3
-                                            and En <= 4095
-                                            or C3 >= 13 + 3
-                                            and En <= 8191
-                                            or C3 >= 14 + 3
-                                            and En <= (8192 * 2) - 1
-                                            or C3 >= 15 + 3
-                                            and En <= (8192 * 4) - 1
-                                            or INFO_A[:3] == "011"
-                                            or INFO_A[:3] == "010"
-                                        ):
-
+                                        if (C3 >= 6 and En <= (2 ** (C3 - 4) - 1)) or INFO_A[:3] in {"011", "010"}:
+    # Your code here
                                             # print(C3)
 
                                             Counts = int(INFO_A, 2)
