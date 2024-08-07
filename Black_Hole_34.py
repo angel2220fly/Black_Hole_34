@@ -1,11 +1,10 @@
-import os
+import os  
 from time import time
 import binascii
 import math
 import os.path
 import sys
-
-# @Author Jurijus Pacalovas
+#@Author Jurijus Pacalovas
 # Get the name of the current script
 
 if os.path.basename(sys.argv[0]) != 'Black_Hole_34.py':
@@ -16,1754 +15,2373 @@ print("The script 'Black_Hole_34.py' is currently running.")
 
 class compression:
 
-    def cryptograpy_compression4(self):
+        def cryptograpy_compression4(self):
 
-        def process_file1(Extract1=0, File_information5_17="Ex", name="", x=0):
-            if Extract1 == 1:
-                with open(name + ".b", "wb") as f2:
-                    f2.write(
-                        binascii.unhexlify(
-                            ("%0" + str((len(File_information5_17) // 8) * 2) + "x")
-                            % int(File_information5_17, 2)
-                        )
-                    )
-                    return str(time() - x)
+              
 
-        def process_file(Extract1=0, File_information5_17="Ex", name="", x=0):
-            if Extract1 == 1:
-                width_bits = (
-                    "%0" + str((len(File_information5_17) // 8) * 2) + "x"
-                ) % int(File_information5_17, 2)
-                with open(name[:-2], "wb") as f2:
-                    f2.write(binascii.unhexlify(width_bits))
-                    return str(time() - x)
 
-        def Count_adds(M1, En, Row1, Row):
 
-            Row += 1
+                def process_file1(Extract1=0, File_information5_17="Ex", name="", x=0):
+                	if Extract1 == 1:
+                		with open(name + ".b", "wb") as f2:
+                			f2.write(binascii.unhexlify(("%0" + str((len(File_information5_17) // 8) * 2) + "x") % int(File_information5_17, 2)))
+                			return str(time() - x)
+               
+                def process_file(Extract1=0, File_information5_17="Ex", name="", x=0):
+                	if Extract1 == 1:
+                		width_bits = ("%0" + str((len(File_information5_17) // 8) * 2) + "x") % int(File_information5_17, 2)
+                		with open(name[:-2], "wb") as f2:
+                			f2.write(binascii.unhexlify(width_bits))
+                			return str(time() - x)
+                def Count_adds(M1,En,Row1,Row):
+                        
+                        Row+=1
+                      
+                        if Row==(8192*4)-1:
+                            Row=0
+                        if M1==0:
+                                En-=1
+                                                                             
+                                                                            
+                        if En==3 or M1==1:
+                                En+=1
+                                M1=1
+                                                                                      
+                        if En==(8192*4)-1:                                                                    
+                                
+                                M1=0
+                                En=255
+                        
+                                
+                        return M1,En,Row1,Row
+                        
 
-            if Row == (8192 * 4) - 1:
-                Row = 0
-            if M1 == 0:
-                En -= 1
+                def Count_adds(M1,En,Row1,Row):
+                        
+                        Row+=1
+                      
+                        if Row==(8192*4)-1:
+                            Row=0
+                        if M1==0:
+                                En-=1
+                                                                             
+                                                                            
+                        if En==3 or M1==1:
+                                En+=1
+                                M1=1
+                                                                                      
+                        if En==(8192*4)-1:                                                                    
+                                
+                                M1=0
+                                En=255
+                        
+                                
+                        return M1,En,Row1,Row
 
-            if En == 3 or M1 == 1:
-                En += 1
-                M1 = 1
+                
 
-            if En == (8192 * 4) - 1:
 
-                M1 = 0
-                En = 255
 
-            return M1, En, Row1, Row
-        #En - intersection points
-        def Count_adds(M1, En, Row1, Row):
+             
 
-            Row += 1
+             
 
-            if Row == (8192 * 4) - 1:
-                Row = 0
-            if M1 == 0:
-                En -= 1
+                import re                                           
 
-            if En == 3 or M1 == 1:
-                En += 1
-                M1 = 1
+                def find_smallest_longl_F_values(input_string):
 
-            if En == (8192 * 4) - 1:
+                    # Extract all 'En', 'En2', 'Row', and 'Longl_F' values
 
-                M1 = 0
-                En = 255
+                    pattern = r'En=(\d+), Longl_F=(\d+)'
 
-            return M1, En, Row1, Row
+                    matches = re.findall(pattern, input_string)
 
-        import re
+                
 
-        def find_smallest_longl_F_values(input_string):
+                    # Convert the extracted strings to tuples of integers
 
-            # Extract all 'En', 'En2', 'Row', and 'Longl_F' values
+                    longl_F_values = [(int(en), int(longl_f)) for en, longl_f in matches]
 
-            pattern = r'En=(\d+), Longl_F=(\d+)'
+                
 
-            matches = re.findall(pattern, input_string)
+                    if longl_F_values:
 
-            # Convert the extracted strings to tuples of integers
+                        # Find the smallest 'Longl_F' value and its corresponding variables
 
-            longl_F_values = [(int(en), int(longl_f)) for en, longl_f in matches]
+                        smallest_longl_F_values = min(longl_F_values, key=lambda x: x[1])
 
-            if longl_F_values:
+                        return smallest_longl_F_values
 
-                # Find the smallest 'Longl_F' value and its corresponding variables
+                    else:
 
-                smallest_longl_F_values = min(longl_F_values, key=lambda x: x[1])
+                        return None
 
-                return smallest_longl_F_values
+                self.name = "Written: Jurijus pacalovas"
 
-            else:
+                N5=1
 
-                return None
+                if N5==1:
 
-        self.name = "Written: Jurijus pacalovas"
+                    Clear=""
 
-        N5 = 1
+                    name = input("What is name of file input? ")
 
-        if N5 == 1:
+                    long_21=len(name)
 
-            Clear = ""
+                    name_f=name[long_21-2:]
 
-            name = input("What is name of file input? ")
+                    if name_f==".b":
 
-            long_21 = len(name)
+                        
 
-            name_f = name[long_21 - 2 :]
+                            i=2
 
-            if name_f == ".b":
+                            
 
-                i = 2
+                    else:
 
-            else:
+                      
 
-                i = 1
+                        i=1
 
-            # print(i)
-            if os.path.exists(name):
+                    #print(i)
+                    if os.path.exists(name):
 
-                print('Path is exists!')
+                            print('Path is exists!')
 
-            else:
+                    else:
 
-                print('Path is not exists!')
+                            print('Path is not exists!')
 
-                raise SystemExit
+                            raise SystemExit
 
-            x = 0
-            C1 = 1
-            x1 = 0
-            x2 = 0
-            x3 = 0
-            X2 = 0
-            C1 = 0
-            C2 = 0
-            C3 = 0
-            C4 = 0
-            ZEROS_ONE_1 = ""
-            Circle_times = 0
-            Circle_times2 = 1
-            Circle_times3 = 0
-            CB = -1
-            x = time()
-            File_information6_Times2_1 = 0
-            name_2 = name
-            Long_Change = len(name_2)
-            compress_or_not_compress = 1
+                    x=0
+                    C1=1
+                    x1=0
+                    x2=0
+                    x3=0
+                    X2=0
+                    C1=0
+                    C2=0
+                    C3=0
+                    C4=0
+                    ZEROS_ONE_1=""
+                    Circle_times=0
+                    Circle_times2=1
+                    Circle_times3=0
+                    CB=-1
+                    x = time()
+                    File_information6_Times2_1=0
+                    name_2=name
+                    Long_Change=len(name_2)
+                    compress_or_not_compress=1
 
-            File_information6_Times3 = 0
+                    File_information6_Times3=0
 
-            if i == 2:
+                    if i==2:
 
-                C = 1
+                        C=1
 
-            Long_Change = len(name_2)
-            s = ""
-            File_information5 = ""
-            File_information5_2 = ""
-            Clear = ""
-            Translate_info_Decimal = ""
-            D = 0
-            long_name = len(name)
-            with open(name, "rb") as binary_file:
+                    Long_Change=len(name_2)
+                    s=""
+                    File_information5=""
+                    File_information5_2=""
+                    Clear=""
+                    Translate_info_Decimal=""
+                    D=0
+                    long_name=len(name)
+                    with open(name, "rb") as binary_file:
 
-                data = binary_file.read()
-                s = str(data)
+                        data = binary_file.read()
+                        s=str(data)
 
-                long_11 = len(data)
+                        long_11=len(data)
 
-                long_17 = len(data)
+                        long_17=len(data)
 
-                if long_17 == 0:
+                        if long_17==0:
 
-                    raise SystemExit
+                        	 raise SystemExit
 
-                END_working = 0
+                        END_working=0
 
-                File_information6_Times2 = 0
+                        File_information6_Times2=0
 
-                File_information5_23 = ""
+                        File_information5_23=""
 
-                INFO18 = ""
+                        INFO18=""
 
-                File_information5_29 = ""
+                        File_information5_29=""
 
-                SpinS = 0
+                        SpinS=0
 
-                while END_working < 10:
+                        while END_working<10:
 
-                    File_information6_Times3 = File_information6_Times3 + 1
+                            File_information6_Times3=File_information6_Times3+1
 
-                    D = 1
+                            D=1
 
-                    if D == 1:
+                            if D==1:
 
-                        if File_information6_Times3 == 1:
+                                if File_information6_Times3==1:
 
-                            INFO = bin(int(binascii.hexlify(data), 16))[
-                                2:
-                            ]  # data to binary
+                                    INFO=bin(int(binascii.hexlify(data),16))[2:]#data to binary
 
-                            long_1 = len(INFO)
+                                    long_1=len(INFO)
 
-                            long_11 = len(data)
+                                    long_11=len(data)
 
-                            count_bits = (long_11 * 8) - long_1
+                                    count_bits=(long_11*8)-long_1
 
-                            z = 0
+                                    z=0
 
-                            if count_bits != 0:
+                                    if count_bits!=0:
 
-                                while z < count_bits:
+                                        while z<count_bits:
 
-                                    INFO = "0" + INFO
+                                            INFO="0"+INFO
 
-                                    z = z + 1
+                                            z=z+1
 
-                            if File_information6_Times3 == 1:
+                                    if File_information6_Times3==1:
 
-                                File_information5_2 = INFO
+                                        File_information5_2=INFO
 
-                            n = int(File_information5_2, 2)
+                                    n = int(File_information5_2, 2)
 
-                            width_bits = len(File_information5_2)
+                                    width_bits=len(File_information5_2)
 
-                            width_bits = (width_bits / 8) * 2
+                                    width_bits=(width_bits/8)*2
 
-                            width_bits = str(width_bits)
+                                    width_bits=str(width_bits)
 
-                            width_bits = "%0" + width_bits + "x"
+                                    width_bits="%0"+width_bits+"x"
 
-                            width_bits3 = binascii.unhexlify(width_bits % n)
+                                    width_bits3=binascii.unhexlify(width_bits % n)                                    
 
-                            width_bits2 = len(width_bits3)
+                                    width_bits2=len(width_bits3)
 
-                            data = width_bits3
+                                    data=width_bits3
 
-                            long_15 = len(data)
+                                    long_15=len(data)
 
-                            INFO = bin(int(binascii.hexlify(data), 16))[2:]
+                                    INFO=bin(int(binascii.hexlify(data),16))[2:]
 
-                            long_1 = len(INFO)
+                                    long_1=len(INFO)
 
-                            long_11 = len(data)
+                                    long_11=len(data)
 
-                            count_bits = (long_11 * 8) - long_1
+                                    count_bits=(long_11*8)-long_1
 
-                            z = 0
+                                    z=0
 
-                            if count_bits != 0:
+                                    if count_bits!=0:
 
-                                while z < count_bits:
+                                        while z<count_bits:
 
-                                    INFO = "0" + INFO
+                                            INFO="0"+INFO
 
-                                    z = z + 1
+                                            z=z+1
 
-                            Check = INFO
+                                    Check=INFO        
 
-                            File_information5_2 = INFO
+                                    File_information5_2=INFO
 
-                            Extact = File_information5_2
+                                    Extact=File_information5_2
 
-                            A = int(Extact, 2)
-                        long_13 = len(File_information5_2)
+                                    A=int(Extact,2)                                    
+                                long_13=len(File_information5_2)
 
-                        long_12 = len(File_information5_2)
+                                long_12=len(File_information5_2)
 
-                        if i == 1:
+                                if i==1:
 
-                            if long_17 > (2**28) - 1 and i == 1:
+                                    if long_17>(2**28)-1 and i==1:
 
-                                print("print file is too big!")
+                                        print("print file is too big!")
 
-                                raise SystemExit
+                                        raise SystemExit
 
-                        if i == 1:
 
-                            Ex = 1
 
-                            if Ex == 1:
+                                if i==1:
 
-                                Extract1 = 0
+                                   
 
-                                Find = 0
 
-                                En = 6
 
-                                Ci = 1
+                                             
 
-                                M1 = 0
+                                                Ex=1
 
-                                Row1 = 0
+                                                if Ex==1:
 
-                                input_string = ""
+                                                
 
-                                C1 = ""
+                                                
 
-                                Row = 0
+                                                    Extract1=0
 
-                                I8 = INFO
+                                                    
 
-                                W3 = ""
+                                                    Find=0
 
-                                W4 = ""
+                                                    En=6
 
-                                block = 0
+                                                    Ci=1
 
-                                IF1 = ""
+                                                    M1=0
 
-                                long_F = len(I8)
+                                                    Row1=0
 
-                                # print(long_F)
-                                #find circle
+                                                    input_string=""
 
-                                FC = 0
+                                                    C1=""
 
-                                IF2 = ""
+                                                    Row=0
 
-                                Z7 = 0
+                                                    I8=INFO
 
-                                CZ = 0
+                                                    W3=""
 
-                                if Circle_times == 0:
+                                                    W4=""
 
-                                    SINFO = ""
+                                                    block=0
 
-                                    TUPLE = INFO
+                                                    IF1=""
 
-                                if Circle_times == 0:
+                                                    long_F=len(I8)
 
-                                    SINFO = INFO
+                                                    #print(long_F)
 
-                                while block < long_F:
+                                                    FC=0
 
-                                    IF = I8[block : block + 8]
+                                                    IF2=""
 
-                                    if FC == 0:
+                                                    Z7=0
 
-                                        IF1 = I8[block + 8 : block + 16]
+                                                    CZ=0
 
-                                    W4 += IF
+                                                    if Circle_times==0:
 
-                                    block += 8
+                                                        SINFO=""
 
-                                    if IF1 == IF:
+                                                        TUPLE=INFO
 
-                                        # print(IF1)
+                                                    if Circle_times==0:
 
-                                        # print(IF2)
+                                                        SINFO=INFO
 
-                                        FC += 1
+                                                    
 
-                                        # print(FC)
 
-                                        if FC == 1:
 
-                                            W = block - 8
+                                                    while block<long_F:
 
-                                    if IF1 != IF:
+                                                                                                                                                         IF=I8[block:block+8]
 
-                                        if FC < 2:
+                                                                                                                                                         if FC==0:
 
-                                            FC = 0
+                                                                                                                                                             IF1=I8[block+8:block+16]
 
-                                        if Z7 == 0:
+                                                                                                                                                         W4+=IF
 
-                                            if FC >= 2:
+                                                                                                                                                         block+=8                                                                                             
 
-                                                Z7 = 1
+                                                                                                                                                      
 
-                                                CZ = 1
-                                                #positin_find_width_bytes
+                                                                                                                                                         
 
-                                                W1 = block - 16
+                                                                                                 
 
-                                                Sw1 = format(W, '01b')
+                                                                                      
 
-                                                Sw3 = format(len(Sw1), '05b')
+                                                                                                                                                         if IF1==IF:
 
-                                                # print(FC)
+                                                                                                                                                             
 
-                                                Sw2 = format(FC, '01b')
+                                                                                                                                                       
 
-                                                Sw4 = format(len(Sw2), '05b')
+                                                                                                                                                       
 
-                                                W3 += "0" + IF1 + Sw3 + Sw1 + Sw4 + Sw2
+                                                                                                                                                             #print(IF1)
 
-                                                W4 = W4[:W] + W4[W1:]
+                                                                                                                                                             #print(IF2)
 
-                                                FC = 0
+                                                                                                                                                             FC+=1
 
-                                if CZ == 0:
+                                                                                                                                                             #print(FC)
 
-                                    W5 = W3 + "1"
+                                                                                                                                                             if FC==1:
 
-                                elif CZ == 1:
+                                                                                                                                                                 
 
-                                    W5 = W3
+                                                                                                                                                                 W=block-8
 
-                                W4 = W5 + W4
+                                                                                                 
 
-                                INFO = W4
+                                                                                                                                                                 
 
-                                # print(len(INFO))
+                                                                                                                                                                 
 
-                                while Find != 1:
+                                                                                                                                                             
 
-                                    # print(Find)
+                                                          
 
-                                    TUPLE = ""
+                                                                                                                                                         if IF1!=IF:
 
-                                    N3 = 0
+                                                                                                                                                               
 
-                                    long_F = len(INFO)
+                                                                                                                                                                 if FC<2:
 
-                                    block = 0
+                                                                                                                                                                     FC=0
 
-                                    FC = 0
+                                                                                                                                                                 if Z7==0:
 
-                                    IF1 = ""
+                                                                                                                                                                    if FC>=2:
 
-                                    while block < long_F:
+                                                                           
 
-                                        INFO_A = INFO[block : block + En]
+                                                                                                                                                                        
 
-                                        longl = len(INFO_A)
+                                                                                                                                                                    
 
-                                        Counts = int(INFO_A, 2)
+                                                                                                                                                                    
 
-                                        C = format(Counts, '01b')
+                                                                                                                                                                     Z7=1
 
-                                        C3 = En - len(C)
+                                                                                                                                                                     CZ=1
 
-                                        # print(C1)
+                                                                                                                                                                     W1=block-16
 
-                                        if (
-                                            C3 >= 3 + 3
-                                            and En <= 7
-                                            or C3 >= 4 + 3
-                                            and En <= 15
-                                            or C3 >= 5 + 3
-                                            and En <= 31
-                                            or C3 >= 6 + 3
-                                            and En <= 63
-                                            or C3 >= 7 + 3
-                                            and En <= 127
-                                            or C3 >= 8 + 3
-                                            and En <= 255
-                                            or C3 >= 9 + 3
-                                            and En <= 511
-                                            or C3 >= 10 + 3
-                                            and En <= 1023
-                                            or C3 >= 11 + 3
-                                            and En <= 2047
-                                            or C3 >= 12 + 3
-                                            and En <= 4095
-                                            or C3 >= 13 + 3
-                                            and En <= 8191
-                                            or C3 >= 14 + 3
-                                            and En <= (8192 * 2) - 1
-                                            or C3 >= 15 + 3
-                                            and En <= (8192 * 4) - 1
-                                            or INFO_A[:3] == "011"
-                                            or INFO_A[:3] == "010"
-                                        ):
+    
 
-                                            # print(C3)
+                                                                                                                                                                     Sw1=format(W,'01b')
 
-                                            Counts = int(INFO_A, 2)
+                                                                                                                                                                     Sw3=format(len(Sw1),'05b')
 
-                                            C = format(Counts, '01b')
+                                                                                                                                                                     #print(FC)
 
-                                            C4 = En - len(C)
+                                                                                                                                                                     
 
-                                            bit_width = math.ceil(math.log2(En + 1))
+                                                                                                                                                                     Sw2=format(FC,'01b')
 
-                                            C1 = format(C4, f'0{bit_width}b')
+                                                                                                                                                                     Sw4=format(len(Sw2),'05b')
 
-                                            C2 = format(longl, '06b')
+                                                                                                                                                                     W3+="0"+IF1+Sw3+Sw1+Sw4+Sw2
 
-                                            if C3 != 1:
+                                                                                                                                                                     W4=W4[:W]+W4[W1:]
 
-                                                Z5 = "011" + C1 + C
+                                                                                                                                                                     FC=0
 
-                                                # print(Z5)
+                                                                                                                                                                     
 
-                                            if C3 == 1:
+                                                                                                                                                     
 
-                                                Z5 = "010" + INFO_A[2:]
+                                                                                                                                                                                                                                                                             
 
-                                                # print(Z5)
+                                                                                                                                                                                                                                                                                                                                                         
 
-                                                # print(INFO_A)
+                                                    if CZ==0:
 
-                                            # print(C1)
+                                                        W5=W3+"1"
 
-                                            # print(INFO_A)
+                                                
 
-                                        else:
+                                                    elif CZ==1:
 
-                                            Z5 = INFO_A
+                                                        W5=W3
 
-                                            # not six Zeros_onesros else 7 Zeros_onesros or more left or 2-5 Zeros_onesros
 
-                                        # change back
 
-                                        # same siZeros_ones
+                                                    W4=W5+W4
 
-                                        TUPLE += Z5
+                                                    INFO=W4
 
-                                        # print(Find)
+                                                    #print(len(INFO))
 
-                                        block += En
 
-                                    if Find == 2 or Row == (8192 * 4) - 2:
 
-                                        Find = 1
+                                                    while Find!=1:
 
-                                        Extract1 = 1
+                                                                        #print(Find)
 
-                                    elif Row == (8192 * 4) - 3 and Find == 3:
+                        
 
-                                        smallest_longl_F_values = (
-                                            find_smallest_longl_F_values(input_string)
-                                        )
+                                                                        TUPLE=""
 
-                                        if smallest_longl_F_values:
+                                                                        N3=0                                                                    
 
-                                            en, longl_F = smallest_longl_F_values
+                                                                        long_F=len(INFO)
 
-                                            En = int(en)
+                                                                        block=0
 
-                                            Find = 2
+                                                                        FC=0
 
-                                    elif (
-                                        len(TUPLE) + 8 + 13 + 8 + len(C1) < long_11 * 8
-                                        and len(C1) != 0
-                                    ):
+                                                                        IF1=""
 
-                                        input_string += (
-                                            "En="
-                                            + str(En)
-                                            + ", "
-                                            + "Longl_F="
-                                            + str(len(TUPLE))
-                                            + " / "
-                                        )
+                                                           
 
-                                        if len(input_string) > 100:
+                                                                        while block<long_F:
 
-                                            smallest_longl_F_values = (
-                                                find_smallest_longl_F_values(
-                                                    input_string
-                                                )
-                                            )
+                                                                            INFO_A=INFO[block:block+En]
 
-                                            if smallest_longl_F_values:
+                                                                            
 
-                                                en, longl_F = smallest_longl_F_values
+                                                                    
 
-                                                input_string = (
-                                                    "En="
-                                                    + str(en)
-                                                    + ", "
-                                                    + "Longl_F="
-                                                    + str(longl_F)
-                                                    + " / "
-                                                )
+                                                                            longl=len(INFO_A)
 
-                                                # print(input_string)
+                                                                            
 
-                                        Find = 3
+                                                                            Counts=int(INFO_A,2)
 
-                                        M1, En, Row1, Row = Count_adds(
-                                            M1, En, Row1, Row
-                                        )
+                                                                            C=format(Counts,'01b')
 
-                                        # print(En)
+                                                                            C3=En-len(C)
 
-                                        # print(len(TUPLE))
+                                                                            #print(C1)
 
-                                    else:
+                                                                            if C3>=3+3 and En<=7 or C3>=4+3 and En<=15 or C3>=5+3 and En<=31 or C3>=6 +3 and En<=63 or C3>=7+3 and En<=127 or C3>=8+3 and En<=255 or C3>=9+3 and En<=511 or C3>=10+3 and En<=1023 or C3>=11+3 and En<=2047 or C3>=12+3 and En<=4095 or C3>=13+3 and En<=8191 or C3>=14+3 and  En<=(8192*2)-1 or C3>=15+3 and En<=(8192*4)-1 or INFO_A[:3]=="011" or INFO_A[:3]=="010":
 
-                                        M1, En, Row1, Row = Count_adds(
-                                            M1, En, Row1, Row
-                                        )
+                                                                               
 
-                                if Ci == 1:
+        
 
-                                    N3 = 1
+                                                                                    #print(C3)
 
-                                    W = "0" + str(len(C1)) + "b"
+                                                                                    
 
-                                    CL1 = format(longl, W)
+                                                                                    
 
-                                    CL2 = format(En, '015b')
+                                                                                    
 
-                                    # print(N3)
+                                                                                    
 
-                                    if N3 == 1:
+                                                                                    
 
-                                        # print(Long_PM1)
+                                                                                    
 
-                                        N3 = 1
+                                                                         
 
-                                        Circle_times += 1
+        
 
-                                        # print(Circle_times)
+                                                                                          
 
-                                        # print(len(TUPLE))
+                                                                                
 
-                                        # print(long_11)
+                                                                              
 
-                                        INFO = CL2 + CL1 + TUPLE
+                                                                                 
 
-                                        if Circle_times == 1:
+        
 
-                                            Circle_times2 = Circle_times
+                                                                                  
 
-                                            long_11 = long_11 * 8
+                                                                                 
 
-                                        Extract1 = 0
+                                                                                    
 
-                                        if len(TUPLE) <= long_11 or Circle_times == 255:
+                                                                                Counts=int(INFO_A,2)
 
-                                            long_11 = len(TUPLE)
+                                                                                C=format(Counts,'01b')
 
-                                            INFOS = INFO
+                                                                                C4=En-len(C)
 
-                                            Circle_times2 = Circle_times
+                                                                                
 
-                                        if (
-                                            len(TUPLE) > long_11
-                                            or Circle_times > Circle_times2 + 1
-                                            or Circle_times == 255
-                                        ):
+                                                                                bit_width = math.ceil(math.log2(En + 1))
 
-                                            N3 = 2
+                                                                                C1 = format(C4, f'0{bit_width}b')
 
-                                            Extract1 = 1
+                                                                                C2=format(longl,'06b') 
 
-                                        if N3 == 2:
+                                                                                                                                                            
 
-                                            SCircle_times = format(Circle_times2, '08b')
+        
 
-                                            if Circle_times == 1:
+                                                                                                                                                                                                
 
-                                                File_information5_17 = (
-                                                    "1" + SCircle_times + INFO
-                                                )
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 
-                                            if Circle_times != 1:
+                                                                                       
 
-                                                File_information5_17 = (
-                                                    "1" + SCircle_times + INFOS
-                                                )
+                                                                                       
 
-                                            N4 = 2
+                                                                                if C3!=1:
 
-                                            if N4 == 2:
+                                                                                       Z5="011"+C1+C
 
-                                                long_1 = len(File_information5_17)
+    
 
-                                                add_bits = ""
+                                                                                       #print(Z5) 
 
-                                                count_bits = 8 - long_1 % 8
+                                                                                           
 
-                                                z = 0
+                                                                                       
 
-                                                if count_bits != 0:
+                                                                                if C3==1:
 
-                                                    while z < count_bits:
+                                                                                       Z5="010"+INFO_A[2:]
 
-                                                        add_bits = "0" + add_bits
+                                                                                       #print(Z5)
 
-                                                        z = z + 1
+                                                                                       
 
-                                                File_information5_17 = (
-                                                    add_bits + File_information5_17
-                                                )
+                                                                                       
 
-                                                N4 = 3
+                                                                                       
 
-                                                if N4 == 3:
+                                                                                                                                                                                                                                       #print(INFO_A)
 
-                                                    File_information5 = (
-                                                        File_information5_17
-                                                    )
+                                                                                   #print(C1)
 
-                                                    Check2 = File_information5_17
+                                                                                   #print(INFO_A)
 
-                                                    N5 == 1
+                                                                            else:
 
-                                                    if N5 == 1:
+                                                                            
 
-                                                        Ex = "00000000" + Check
+                                                                                   Z5=INFO_A
 
-                                                        File_information5_17 = Ex
+                                                                                   
 
-                                                        elapsed_time = process_file1(
-                                                            Extract1=1,
-                                                            File_information5_17=File_information5_17,
-                                                            name=name,
-                                                            x=x,
-                                                        )
+                                                                                   #not six Zeros_onesros else 7 Zeros_onesros or more left or 2-5 Zeros_onesros
 
-                                                    Circle_times3 = 0
+                                                                            
 
-                                                    Extract1 = 0
+                        
 
-                                                    Circle_times = 0
+                                                                            
 
-                                                    if Circle_times3 == 0:
+                                                                                 #change back
 
-                                                        long_16 = len(File_information5)
+                                                                                
 
-                                                        if File_information5[:1] == "0":
+                                                                         
 
-                                                            while (
-                                                                File_information5[:1]
-                                                                != "1"
-                                                            ):
+                                                                                #same siZeros_ones
 
-                                                                if (
-                                                                    File_information5[
-                                                                        :1
-                                                                    ]
-                                                                    == "0"
-                                                                ):
+                                                                                
 
-                                                                    File_information5 = File_information5[
-                                                                        1:
-                                                                    ]
+                        
 
-                                                        if File_information5[:1] == "1":
+                                                                           
 
-                                                            File_information5 = (
-                                                                File_information5[1:]
-                                                            )
+                                                                            TUPLE+=Z5
 
-                                                    INFO = File_information5
+                                                                            #print(Find)
 
-                                                    if Circle_times3 == 0:
+                                                                            block+=En
 
-                                                        Circle_times4 = int(INFO[:8], 2)
+                                                                            
 
-                                                        # print(Circle_times4)
+                                                                   
 
-                                                        INFO = INFO[8:]
+    
 
-                                                    while Extract1 != 1:
+                                                                        if  Find==2 or Row==(8192*4)-2:
 
-                                                        En = int(INFO[:15], 2)
+                                                                                    Find=1
 
-                                                        # print(longl)
+                                                                                    Extract1=1                                                             
 
-                                                        INFO = INFO[15:]
+                                                                                                   
 
-                                                        En2 = 0
+                                                                        
 
-                                                        for i in range(3, 16):
+                                                                        elif Row==(8192*4)-3 and Find==3:
 
-                                                            if En <= (2**i) - 1:
+                                                                            smallest_longl_F_values = find_smallest_longl_F_values(input_string)
 
-                                                                longl = int(INFO[:i], 2)
+                                                                            
 
-                                                                INFO = INFO[i:]
+                                                                            if smallest_longl_F_values:
 
-                                                                SEN = i
+                                                                                en, longl_F = smallest_longl_F_values
 
-                                                                break
+                                                                                En=int(en)
 
-                                                        Extract1 = 0
+                                                                                
 
-                                                        TUPLE = ""
+                                                                                Find=2     
 
-                                                        N3 = 0
+                                                                                                                    
 
-                                                        long_F = len(INFO)
+                                                                                                                                                                                                                                                                                                                                                                                    
 
-                                                        block = 0
+                                                                                                                                                                                                                                                                                                                                                                                
 
-                                                        Save = 0
+                                                                                                                                                                                                                                                                                                                                                                                
 
-                                                        while block < len(INFO):
+                                                                                                                                                                                                                                                                                                                                                                                
 
-                                                            C9 = 0
+                                                                                                                                                                                                                                                                                                                                                                                
 
-                                                            C10 = 0
+                                                                                                                                                                                                                
 
-                                                            Block_Check_Add = block
+                                                                                                                                                                                                                                                                                                                                                                                    
 
-                                                            O = INFO[block : block + 3]
+                                                                                                                                                                                                                                                                                                                                                                                    
 
-                                                            if O == "010":
+                                                                        elif len(TUPLE)+8+13+8+len(C1) < long_11*8 and len(C1)!=0:
 
-                                                                block += 3
+                                                                      
 
-                                                                OC = INFO[
-                                                                    block : block
-                                                                    + En
-                                                                    - 2
-                                                                ]
+                                                                            
 
-                                                                C10 = 1
+                                                                            
 
-                                                                C9 = 1
+                                                                            input_string+= "En="+str(En)+", "+"Longl_F="+str(len(TUPLE))+" / "
 
-                                                                if len(OC) == 0:
+                                                                       
 
-                                                                    File_information5_17 = (
-                                                                        "00000000"
-                                                                        + Check
-                                                                    )
+                                                                            
 
-                                                                    Ex = Check
+                                                                        
 
-                                                                    elapsed_time = process_file1(
-                                                                        Extract1=1,
-                                                                        File_information5_17=File_information5_17,
-                                                                        name=name,
-                                                                        x=x,
-                                                                    )
+                                                                            
 
-                                                                    return elapsed_time
+                                                                            
 
-                                                                E = int(OC, 2)
+                                                                            
 
-                                                                Row1 = (
-                                                                    "0"
-                                                                    + str(En - 2)
-                                                                    + "b"
-                                                                )
+                                                                            if len(input_string)>100:
 
-                                                                ZEROS_ONES = format(
-                                                                    E, Row1
-                                                                )
+                                                                             smallest_longl_F_values = find_smallest_longl_F_values(input_string)
 
-                                                                if len(ZEROS_ONES) == 0:
+                                                                             if smallest_longl_F_values:
 
-                                                                    File_information5_17 = (
-                                                                        "00000000"
-                                                                        + Check
-                                                                    )
+                                                                                 en, longl_F = smallest_longl_F_values
 
-                                                                    Ex = Check
+                                                                                 input_string= "En="+str(en)+", "+"Longl_F="+str(longl_F)+" / "
 
-                                                                    elapsed_time = process_file1(
-                                                                        Extract1=1,
-                                                                        File_information5_17=File_information5_17,
-                                                                        name=name,
-                                                                        x=x,
-                                                                    )
+                                                                                 #print(input_string)
 
-                                                                    return elapsed_time
+                                                                                 
 
-                                                                ZEROS_ONES = (
-                                                                    "01" + ZEROS_ONES
-                                                                )
+                                                                                                                                                                                                                                                                                           
 
-                                                                ZEROS_ONE_1 = (
-                                                                    "01" + ZEROS_ONE_1
-                                                                )
+                                                                                                                                                                                                                                                                                           
 
-                                                                block += En - 2
+    
 
-                                                            elif O == "011":
+                                                                            Find=3
 
-                                                                block += 3
+                                                                            M1,En,Row1,Row=Count_adds(M1,En,Row1,Row)
 
-                                                                C10 = 1
+                                                                            
 
-                                                                if En <= (8192 * 4) - 1:
+                                                                            
 
-                                                                    OCl = INFO[
-                                                                        block : block
-                                                                        + SEN
-                                                                    ]
+                                                                                 #print(En)
 
-                                                                    SiZeros_ones = int(
-                                                                        OCl, 2
-                                                                    )
+                                                                                 #print(len(TUPLE))   
 
-                                                                    block += SEN
+                                                                                 
 
-                                                                EB = INFO[
-                                                                    block : block
-                                                                    + (
-                                                                        En
-                                                                        - SiZeros_ones
-                                                                    )
-                                                                ]
+                                                                        else:
 
-                                                                S = len(EB)
+                                                                                 M1,En,Row1,Row=Count_adds(M1,En,Row1,Row)
 
-                                                                block += (
-                                                                    En - SiZeros_ones
-                                                                )
+                                                                                 
 
-                                                                Row1 = (
-                                                                    "0" + str(En) + "b"
-                                                                )
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
 
-                                                                if S > 0:
+                                                    if Ci==1:               
 
-                                                                    E = int(EB, 2)
+                                                                
 
-                                                                else:
+                                                               
 
-                                                                    E = 0
+                                                                    N3=1
 
-                                                                ZEROS_ONES = format(
-                                                                    E, Row1
-                                                                )
+                                                                                                                     
 
-                                                                C = (
-                                                                    "0"
-                                                                    + str(longl)
-                                                                    + "b"
-                                                                )
+                                                                    
 
-                                                                ZEROS_ONES = format(
-                                                                    E, Row1
-                                                                )
+    
 
-                                                                ZEROS_ONE_1 = format(
-                                                                    E, C
-                                                                )
+                                                                    W="0"+str(len(C1))+"b"
 
-                                                            else:
+                                                                    CL1=format(longl,W)        
 
-                                                                EB = INFO[
-                                                                    block : block + En
-                                                                ]
+                                                                    CL2=format(En,'015b')
 
-                                                                C10 = 1
+                                                                  
 
-                                                                block += En
+                                                                
 
-                                                                Row1 = (
-                                                                    "0" + str(En) + "b"
-                                                                )
+                                                                    
 
-                                                                E = int(EB, 2)
+                                                                 
 
-                                                                ZEROS_ONES = format(
-                                                                    E, Row1
-                                                                )
+                                                                   
 
-                                                                C = (
-                                                                    "0"
-                                                                    + str(longl)
-                                                                    + "b"
-                                                                )
+                                                                    #print(N3)
 
-                                                                ZEROS_ONES = format(
-                                                                    E, Row1
-                                                                )
+                                                                                                                             
 
-                                                                ZEROS_ONE_1 = format(
-                                                                    E, C
-                                                                )
+                                                                    if N3==1:
 
-                                                            Z2 = ZEROS_ONES
+    
 
-                                                            # print(Z2)
+                                                                         
 
-                                                            TUPLE += Z2
+                                                                         
 
-                                                            # print(block)
+                                                                           
 
-                                                            # print(long_F)
+                                                                         
 
-                                                            if block >= long_F:
+                                                                           #print(Long_PM1)
 
-                                                                Save = 1
+                                                                           N3=1
 
-                                                                # print(Save)
+                                                                           Circle_times+=1
 
-                                                        # print(TUPLE)
+                                                                           #print(Circle_times)
 
-                                                        long_L = len(TUPLE)
+                                                                           #print(len(TUPLE))
 
-                                                        # print(long_L)
+                                                                           #print(long_11)
 
-                                                        if (
-                                                            C9 == 0
-                                                            and (long_L - En) >= 0
-                                                        ):
+                                                                           INFO=CL2+CL1+TUPLE
 
-                                                            TUPLE = TUPLE[: long_L - En]
+                                                                        
 
-                                                            TUPLE += ZEROS_ONE_1
+                                                                           
 
-                                                        elif (
-                                                            C9 == 1
-                                                            and (long_L - 2 - En) >= 0
-                                                        ):
+                                                                           if Circle_times==1:
 
-                                                            TUPLE = TUPLE[
-                                                                : long_L - 2 - En
-                                                            ]
+                                                                                                                                                                            Circle_times2=Circle_times
 
-                                                            TUPLE += ZEROS_ONE_1
+                                                                                                                                                                            long_11=long_11*8
 
-                                                        N3 = 1
 
-                                                        # print(N3)
 
-                                                        if N3 == 1:
+                                                                               
 
-                                                            N3 = 1
 
-                                                            block = 0
 
-                                                            long_F = len(TUPLE)
+                                                                               
 
-                                                            Z = TUPLE
+                                                                           
 
-                                                            Z6 = ""
+                                                                           
 
-                                                            Z7 = 0
+                                                                           Extract1=0
 
-                                                            TUPLE1 = Z
+                                                                           if len(TUPLE)<=long_11 or Circle_times==255:
 
-                                                            cut_b = 0
+                                                                               long_11=len(TUPLE)
 
-                                                            long_F = len(TUPLE)
+                                                                            
 
-                                                            # print(len(TUPLE))
+                                                                               INFOS=INFO
 
-                                                            if N3 == 1:
+                                                                             
 
-                                                                E = Z[block : block + 1]
+                                                                          
 
-                                                                if E == "0":
+                                                                               Circle_times2=Circle_times
 
-                                                                    cut_b = 1
+                                                                               
 
-                                                                    CB += 1
+                                                                           if len(TUPLE)>long_11 or Circle_times>Circle_times2+1 or Circle_times==255:
 
-                                                                    block += 1
+                                                                                                                 
 
-                                                                    E2 = Z[
-                                                                        block : block
-                                                                        + 8
-                                                                    ]
+                                                                                                                 
 
-                                                                    block += 8
+                                                                               N3=2
 
-                                                                    E3 = int(
-                                                                        Z[
-                                                                            block : block
-                                                                            + 5
-                                                                        ],
-                                                                        2,
-                                                                    )
+                                                                               
 
-                                                                    block += 5
+                                                                               Extract1=1
 
-                                                                    S5 = Z[
-                                                                        block : block
-                                                                        + E3
-                                                                    ]
+                                                                               
 
-                                                                    if len(S5) == 0:
+                                                                                                                                                    
 
-                                                                        File_information5_17 = (
-                                                                            "00000000"
-                                                                            + Check
-                                                                        )
+                                                                           if N3==2:
 
-                                                                        Ex = Check
+                                                                               SCircle_times=format(Circle_times2,'08b')
 
-                                                                        elapsed_time = process_file1(
-                                                                            Extract1=1,
-                                                                            File_information5_17=File_information5_17,
-                                                                            name=name,
-                                                                            x=x,
-                                                                        )
+                                                                               if Circle_times==1:
 
-                                                                        return (
-                                                                            elapsed_time
-                                                                        )
+                                                                                   File_information5_17="1"+SCircle_times+INFO
 
-                                                                    E1 = int(
-                                                                        Z[
-                                                                            block : block
-                                                                            + E3
-                                                                        ],
-                                                                        2,
-                                                                    )
+                                                                                   
 
-                                                                    block += E3
+                                                                                   
 
-                                                                    TUPLE4 = int(
-                                                                        Z[
-                                                                            block : block
-                                                                            + 5
-                                                                        ],
-                                                                        2,
-                                                                    )
+                                                                               if Circle_times!=1:
 
-                                                                    block += 5
+                                                                                   File_information5_17="1"+SCircle_times+INFOS                                                                                 
 
-                                                                    E5 = int(
-                                                                        Z[
-                                                                            block : block
-                                                                            + TUPLE4
-                                                                        ],
-                                                                        2,
-                                                                    )
+                                                                               N4=2
 
-                                                                    block += TUPLE4
+                                                                               if N4==2:                                                                             
 
-                                                                    b = 0
+                                                                                    
 
-                                                                    E3 = ""
+                                                                                       long_1=len(File_information5_17)
 
-                                                                    while b < E5 - 1:
+                                                                                       add_bits=""
 
-                                                                        E3 += E2
+                                                                                       count_bits=8-long_1%8
 
-                                                                        b += 1
+                                                                                       z=0
 
-                                                                        # print(E2)
+                                                                                       if count_bits!=0:
 
-                                                                    TUPLE1 = TUPLE1[
-                                                                        block:
-                                                                    ]
+                                                                                               while z<count_bits:
 
-                                                                    TUPLE1 = (
-                                                                        TUPLE1[:E1]
-                                                                        + E3
-                                                                        + TUPLE1[E1:]
-                                                                    )
+                                                                                                       add_bits="0"+add_bits
 
-                                                                    block += long_F
+                                                                                                       z=z+1
 
-                                                                elif E == "1":
+                                                                                       File_information5_17=add_bits+File_information5_17
 
-                                                                    block += 1
+                                                                                       N4=3
 
-                                                                    Z7 = 1
+                                                                                       if N4==3:
 
-                                                                    if cut_b == 0:
+                                                                                                                                            
 
-                                                                        TUPLE1 = TUPLE1[
-                                                                            block:
-                                                                        ]
+                                                                                                                                            File_information5=File_information5_17
 
-                                                                        block += long_F
+                                                                                                                                            Check2=File_information5_17
 
-                                                                        cut_b = 1
+                                                                                                                                            
 
-                                                                        # print(CB)
+                                                                                                                                            N5==1
 
-                                                                        # print(block)
+                                                                                                                                            if N5==1:
 
-                                                                else:
+                                                                                                                                                                                                                                                           Ex="00000000"+Check
 
-                                                                    block += 1
+                                                                                                                                                                                                                                                           File_information5_17=Ex
 
-                                                            # print(Long_PM1)
+                                                                                                                                                                                                                                                           elapsed_time = process_file1(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)                                                                                            
 
-                                                            TUPLE = TUPLE1
+                                                                                                                                            Circle_times3=0
 
-                                                            # print(len(TUPLE))
+                                                                                                                                            Extract1=0
 
-                                                            N3 = 1
+                                                                                                                                            Circle_times=0
 
-                                                            Circle_times += 1
+                                                                                                                                                                                
 
-                                                            # print(Circle_times)
+                                                                                     
 
-                                                            INFO = TUPLE
+                                                                                                                                            if   Circle_times3==0:
 
-                                                            Extract1 = 0
+                                                                                                                                                    long_16=len(File_information5)
 
-                                                            N3 = 0
+                                                                                                    
 
-                                                            # print(len(TUPLE))
+                                                                                                                                                    if File_information5[:1]=="0":
 
-                                                            # print(Circle_times4)
+                                                                                                                                                        while File_information5[:1]!="1":
 
-                                                            if (
-                                                                Circle_times
-                                                                == Circle_times4
-                                                            ):
+                                                                                                                                                            if File_information5[:1]=="0":
 
-                                                                Extract1 = 1
+                                                                                                                                                                File_information5=File_information5[1:]
 
-                                                                if Check == TUPLE:
+                                                                                                                                                                
 
-                                                                    File_information5_17 = (
-                                                                        Check2
-                                                                    )
+                                                                                                                                                                
 
-                                                                if Check != TUPLE:
+                                                                                                                                                    if File_information5[:1]=="1":
 
-                                                                    Ex = (
-                                                                        "00000000"
-                                                                        + Check
-                                                                    )
+                                                                                                                                                        File_information5=File_information5[1:]
 
-                                                                    File_information5_17 = (
-                                                                        Ex
-                                                                    )
+                                                                                                                                            INFO=File_information5         
 
-                                                                    elapsed_time = process_file1(
-                                                                        Extract1=1,
-                                                                        File_information5_17=File_information5_17,
-                                                                        name=name,
-                                                                        x=x,
-                                                                    )
+                                                                                                                                            if   Circle_times3==0:                
 
-                                                                    return elapsed_time
+                                                                                                                                        
 
-                                if Extract1 == 1:
+                                                                                                                                                        Circle_times4=int(INFO[:8],2)
 
-                                    L = len(File_information5_17)
+                                                                                                                                                        #print(Circle_times4)
 
-                                    # print(L)
+                                                                                                                                                        INFO=INFO[8:]
 
-                                    n = int(File_information5_17, 2)
+                                                                                                                                                     
 
-                                    width_bits = len(File_information5_17)
+                                                                                                                                                        
 
-                                    width_bits = (width_bits // 8) * 2
+                                                                                                                                                        
 
-                                    width_bits = str(width_bits)
+                                                                                                                                                        
 
-                                    width_bits = "%0" + width_bits + "x"
+                                                                                                                                            while Extract1!=1:
 
-                                    width_bits3 = binascii.unhexlify(width_bits % n)
+                                                                                                                                                    
 
-                                    width_bits2 = len(width_bits3)
+                                                                                                                                                                                                   
 
-                                    File_information5_2 = Clear
+                                                                                                                                                        
 
-                                    jl = width_bits3
+                                                                                                                                                    En=int(INFO[:15],2)
 
-                                    name1 = name + ".b"
+                                                                                                                                                        #print(longl)
 
-                                    with open(name1, "wb") as f2:
+                                                                                                                                                    INFO=INFO[15:]
 
-                                        f2.write(jl)
+                                                                                                                                                    En2=0
 
-                                    x2 = time()
+                                                                                                                                                    
 
-                                    x3 = x2 - x
+                                                                                                                                                    for i in range(3, 16):
 
-                                    print(f"Speed bits: {(long_11) / x3:.5f}")
+                                                                                                                                                    	if En <= (2**i) - 1:
 
-                                    xs = float(x3)
+                                                                                                                                                    		longl = int(INFO[:i], 2)
 
-                                    xs = str(xs)
+                                                                                                                                                    		INFO = INFO[i:]
 
-                                    return xs
+                                                                                                                                                    		SEN = i
 
-                        if i == 2:
+                                                                                                                                                    		break
 
-                            if C == 1:
+                                                                                                                                                    
 
-                                Extract1 = 0
+                           
 
-                                if File_information6_Times2 == 0:
+                                                                                                                                                               
 
-                                    File_information5 = INFO
+                                                                                                                                                    
 
-                                    Extract = 0
+                                                                                                                                                    Extract1=0
 
-                                    Ex = INFO
+                                                                                                                
 
-                                    if Ex[:8] == "00000000":
+                                                                                                                                                    TUPLE=""
 
-                                        L = len(Ex[8:])
+                                                                                                                                                    N3=0
 
-                                        File_information5_17 = Ex[8:]
+                                                                                                                                                    long_F=len(INFO)
 
-                                        n = int(File_information5_17, 2)
+                                                                                                                                                    block=0
 
-                                        width_bits = len(File_information5_17)
+                                                                                                                                                    Save=0
 
-                                        width_bits = (width_bits // 8) * 2
+                                                                                                                                                               
 
-                                        width_bits = str(width_bits)
+                                                                                                                                                    while block<len(INFO):
 
-                                        width_bits = "%0" + width_bits + "x"
+                                                                                             
 
-                                        width_bits3 = binascii.unhexlify(width_bits % n)
+                                                                                                                                                                                        C9=0
 
-                                        width_bits2 = len(width_bits3)
+                                                                                                                                                                                        C10=0
 
-                                        File_information5_2 = Clear
+                                                                                                                                                                                        Block_Check_Add=block
 
-                                        jl = width_bits3
+                                                                                                                                                                                      
 
-                                        long = len(name)
+                                                                                                                                                                                    
 
-                                        name2 = name[: long - 2]
+                                                                                                                                                                                        O=INFO[block:block+3]
 
-                                        with open(name2, "wb") as f2:
+                                                                                                                                                                                        
 
-                                            f2.write(width_bits3)
+                                                                                                                                                                                        
 
-                                        x2 = time()
+                                                                                                                                                                                        
 
-                                        x3 = x2 - x
+                                                                                                                                                                                        if O=="010":
 
-                                        xs = float(x3)
+                                                                                                                                                                                   
 
-                                        xs = str(xs)
+                                                                                                                                                                                               block+=3
 
-                                        return xs
+                                                                                                                                                                                               OC=INFO[block:block+En-2]
 
-                                    if Circle_times3 == 0:
+                                                                                                                                                                                               C10=1
 
-                                        long_16 = len(File_information5)
+                                                                                                                                                                                               C9=1
 
-                                        if File_information5[:1] == "0":
+                                                                                                                                                                                               if len(OC)==0:
 
-                                            while File_information5[:1] != "1":
+                                                                                                                                                                                                                                                       
 
-                                                if File_information5[:1] == "0":
+                                                                                                                                                                                                                                                           File_information5_17="00000000"+Check
 
-                                                    File_information5 = (
-                                                        File_information5[1:]
-                                                    )
+                                                                                                                                                                                                                                                           Ex=Check
 
-                                        if File_information5[:1] == "1":
+                                                                                                                                                                                                                                                           elapsed_time = process_file1(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
 
-                                            File_information5 = File_information5[1:]
+                                                                                                                                                                                                                                                           return  elapsed_time       
 
-                                    INFO = File_information5
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
 
-                                    if Circle_times3 == 0:
+                                                                                                                                                                                               E=int(OC,2)
 
-                                        Circle_times4 = int(INFO[:8], 2)
+                                                                                                                                                                                               Row1="0"+str(En-2)+"b"
 
-                                        # print(Circle_times4)
+                                                                                                                                                                                               
 
-                                        INFO = INFO[8:]
+                                                                                                                                                                                               
 
-                                    while Extract1 != 1:
+                                                                                                                                                                                               ZEROS_ONES=format(E,Row1)
 
-                                        En = int(INFO[:15], 2)
+                                                                                                                                                                                               if len(ZEROS_ONES)==0:
 
-                                        # print(longl)
+                                                                                                                                                                                                                                                       File_information5_17="00000000"+Check
 
-                                        INFO = INFO[15:]
+                                                                                                                                                                                                                                                       Ex=Check
 
-                                        En2 = 0
+                                                                                                                                                                                                                                                       elapsed_time = process_file1(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
 
-                                        for i in range(3, 16):
+                                                                                                                                                                                                                                                       return  elapsed_time      
 
-                                            if En <= (2**i) - 1:
+                                                                                                                                                                                          
 
-                                                longl = int(INFO[:i], 2)
+                                                                                                                                                                                                                                                     
 
-                                                INFO = INFO[i:]
+                                                                                                                                                                                                                                                       
 
-                                                SEN = i
+                                                                                                                                                                                                                                                                                                                                                                                    
 
-                                                break
+                                                                                                   
 
-                                        Extract1 = 0
+                                                                                                          
 
-                                        TUPLE = ""
+                                                                                                 
 
-                                        N3 = 0
+                                                                                                                                                                                               
 
-                                        long_F = len(INFO)
+                                                                                                                                                                                          
 
-                                        block = 0
+                                                                                                                                                                                               
 
-                                        Save = 0
+                                                                                                                                                                                               ZEROS_ONES="01"+ZEROS_ONES
 
-                                        while block < len(INFO):
+                                                                                                                                                                                               ZEROS_ONE_1="01"+ZEROS_ONE_1                                                                                                                                                                                      
 
-                                            C9 = 0
+                                                                                                                                                                                               block+=En-2                                                                                   
 
-                                            O = INFO[block : block + 3]
+                                                                                                                            
 
-                                            if O == "010":
+                                                                                                                                                                                                 
 
-                                                block += 3
+                                                                                                                                                                                            
 
-                                                OC = INFO[block : block + En - 2]
+                                                                                                                                                                                            
 
-                                                if len(OC) == 0:
+                                                                                                                                                                                            
 
-                                                    File_information5_17 = Ex
+                                                                                                                                                                                                                                
 
-                                                    elapsed_time = process_file(
-                                                        Extract1=1,
-                                                        File_information5_17=File_information5_17,
-                                                        name=name,
-                                                        x=x,
-                                                    )
+                                                                                                                                                                                        
 
-                                                    return elapsed_time
+                                                                                                                                                                                        elif O=="011":
 
-                                                E = int(OC, 2)
+                                                                                                                                                                                   
 
-                                                Row1 = "0" + str(En - 2) + "b"
+                                                                                                                                                                                   
 
-                                                C9 = 1
+                                                                                                                                                                                            block+=3
 
-                                                ZEROS_ONES = format(E, Row1)
+                                                                                                                                                                                            C10=1
 
-                                                if len(ZEROS_ONES) == 0:
+                                                                                                                                                                                            
 
-                                                    File_information5_17 = Ex
+                                                                                                                                                                                            if En<=(8192*4)-1:                                                      
 
-                                                    elapsed_time = process_file(
-                                                        Extract1=1,
-                                                        File_information5_17=File_information5_17,
-                                                        name=name,
-                                                        x=x,
-                                                    )
+                                                                                                                                                                                            
 
-                                                    return elapsed_time
+                                                                                                                                                                                                OCl=INFO[block:block+SEN]
 
-                                                C = "0" + str(longl - 2) + "b"
+                                                                                                                                                                                                SiZeros_ones=int(OCl,2)
 
-                                                ZEROS_ONES = format(E, Row1)
+                                                                                                                                                                                                block+=SEN                                                               
 
-                                                if len(ZEROS_ONES) == 0:
+                                                                                                                            
 
-                                                    Extract1 = 0
+                                                                                                                            
 
-                                                    File_information5_17 = Ex
+                                                                                                                                                                                               
 
-                                                    elapsed_time = process_file(
-                                                        Extract1=1,
-                                                        File_information5_17=File_information5_17,
-                                                        name=name,
-                                                        x=x,
-                                                    )
+                                                                                                                                                                                            EB=INFO[block:block+(En-SiZeros_ones)]
 
-                                                    return elapsed_time
+                                                                                                                                                                                            S=len(EB)
 
-                                                ZEROS_ONES = "01" + ZEROS_ONES
+                                                                                                                                                                                           
 
-                                                ZEROS_ONE_1 = "01" + ZEROS_ONE_1
+                                                                                                                                                                                            block+=En-SiZeros_ones
 
-                                                block += En - 2
+                                                                                                                                                                                            Row1="0"+str(En)+"b"
 
-                                            elif O == "011":
+                                                                                                                                                                                            if S>0:
 
-                                                block += 3
+                                                                                                                                                                                                E=int(EB,2)
 
-                                                if En <= (8192 * 4) - 1:
+                                                                                                                                                                                            else:
 
-                                                    OCl = INFO[block : block + SEN]
+                                                                                                                                                                                                E=0
 
-                                                    SiZeros_ones = int(OCl, 2)
+                                                                                                                                                                                            ZEROS_ONES=format(E,Row1)
 
-                                                    block += SEN
+                                                                                                                                                                                            C="0"+str(longl)+"b"
 
-                                                EB = INFO[
-                                                    block : block + (En - SiZeros_ones)
-                                                ]
+                                                                                                                                                                                            ZEROS_ONES=format(E,Row1)
 
-                                                S = len(EB)
+                                                                                                                                                                                            ZEROS_ONE_1=format(E,C)
 
-                                                block += En - SiZeros_ones
+                                                                                                                            
 
-                                                Row1 = "0" + str(En) + "b"
+                                                                                                                                                                                                     
 
-                                                if S > 0:
+                                                                                                                                                                                                        
 
-                                                    E = int(EB, 2)
+                                                                                                                                                                                        else:
 
-                                                else:
+                                                                                                                                                                                               EB=INFO[block:block+En]
 
-                                                    E = 0
+                                                                                                                                                                                               C10=1
 
-                                                ZEROS_ONES = format(E, Row1)
+                                                                                                                                                                                               
 
-                                                C = "0" + str(longl) + "b"
+                                                                                                                                                                                               block+=En
 
-                                                ZEROS_ONES = format(E, Row1)
+                                                                                                                                                                                               Row1="0"+str(En)+"b"
 
-                                                ZEROS_ONE_1 = format(E, C)
+                                                                                                                                                                                              
 
-                                            else:
+                                                                                                                            
 
-                                                EB = INFO[block : block + En]
+                                                                                                                                                                                               E=int(EB,2)
 
-                                                block += En
+                                                                                                                                                                                               ZEROS_ONES=format(E,Row1)
 
-                                                Row1 = "0" + str(En) + "b"
+                                                                                                                                                                                               C="0"+str(longl)+"b"
 
-                                                E = int(EB, 2)
+                                                                                                                                                                                               ZEROS_ONES=format(E,Row1)
 
-                                                ZEROS_ONES = format(E, Row1)
+                                                                                                                                                                                               ZEROS_ONE_1=format(E,C)                                                                                                   
 
-                                                C = "0" + str(longl) + "b"
+                                                                                                                                
 
-                                                ZEROS_ONES = format(E, Row1)
+                                                                                                                                                                                        
 
-                                                ZEROS_ONE_1 = format(E, C)
+                                                                                                                                                                                                                                        
 
-                                            Z2 = ZEROS_ONES
+                                                                                                                                                                                     
 
-                                            # print(Z2)
+                                                                                                                                                                                
 
-                                            TUPLE += Z2
+                                                                                                                                                                                        Z2=ZEROS_ONES
 
-                                            # print(block)
+                                                                                                                                                                                        #print(Z2)
 
-                                            # print(long_F)
+                                                                                                                            
 
-                                            if block >= long_F:
+                                                                                                                                                                                        TUPLE+=Z2                                                            
 
-                                                Save = 1
+                                                                                                                                                                                        #print(block)
 
-                                                # print(Save)
+                                                                                                                                                                                    
 
-                                        # print(TUPLE)
+                                                                                             
 
-                                        long_L = len(TUPLE)
+                                                                                                                                                                                                                                                                                      #print(long_F)
 
-                                        # print(long_L)
+                                                                                                                                                                                        if block>=long_F:
 
-                                        if C9 == 0 and (long_L - En) >= 0:
+                                                                                                                                                                                            Save=1
 
-                                            TUPLE = TUPLE[: long_L - En]
+                                                                                                                                                                                            #print(Save)
 
-                                            TUPLE += ZEROS_ONE_1
+                                                                                                                                                                                      
 
-                                        elif C9 == 1 and (long_L - 2 - En) >= 0:
+                                                                                                                            
 
-                                            TUPLE = TUPLE[: long_L - 2 - En]
+                                                                                                                                                                                   
 
-                                            TUPLE += ZEROS_ONE_1
+                                                                                                                                                                                                                                                                                                                                        
 
-                                        N3 = 1
+                                                                                                                            
 
-                                        # print(N3)
+                                                                                                                                                                        
 
-                                        if N3 == 1:
+                                                                                                                                                                            #print(TUPLE)
 
-                                            N3 = 1
+                                                                                                                                                                         
 
-                                            block = 0
+                                                                                                                
 
-                                            long_F = len(TUPLE)
+                                                                                                                                                                                                                                                                                                                    
 
-                                            Z = TUPLE
+                                                                                                                                                    long_L=len(TUPLE)
 
-                                            Z6 = ""
+                                                                                                                                                                            #print(long_L)
 
-                                            Z7 = 0
+                                                                                                                                                    if C9==0 and  (long_L-En)>=0:
 
-                                            TUPLE1 = Z
+                                                                                                                                                                     TUPLE=TUPLE[:long_L-En]
 
-                                            cut_b = 0
+                                                                                                                                                                     TUPLE+=ZEROS_ONE_1
 
-                                            long_F = len(TUPLE)
 
-                                            while block < long_F:
 
-                                                E = Z[block : block + 1]
+                                                                                                                                                    elif C9==1 and  (long_L-2-En)>=0:
 
-                                                if E == "0" and Z7 == 0:
+                                                                                                                                                                     TUPLE=TUPLE[:long_L-2-En]
 
-                                                    cut_b = 1
+                                                                                                                                                                     TUPLE+=ZEROS_ONE_1                                                                                                                                                                                          
 
-                                                    block += 1
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
-                                                    E2 = Z[block : block + 8]
+                                                                                                                                                    N3=1
 
-                                                    block += 8
+                                                                                                                                                                            
 
-                                                    E3 = int(Z[block : block + 5], 2)
+                                                                                                                                                                           
 
-                                                    block += 5
+                                                                                                                                                                            #print(N3)
 
-                                                    S5 = Z[block : block + E3]
+                                                                                                                                                                                                                                     
 
-                                                    if len(S5) == 0:
+                                                                                                                                                    if N3==1:
 
-                                                        Extract1 = 0
+                                                                                                                                                                       N3=1
 
-                                                        File_information5_17 = Ex
+                                                                                                                                                                      
 
-                                                        elapsed_time = process_file(
-                                                            Extract1=1,
-                                                            File_information5_17=File_information5_17,
-                                                            name=name,
-                                                            x=x,
-                                                        )
+                                                                                                                                                                                
 
-                                                        return elapsed_time
+                                                                                                                                                                       block=0
 
-                                                    E1 = int(Z[block : block + E3], 2)
+                                                                                                                                                                       long_F=len(TUPLE)
 
-                                                    block += E3
+                                                                                                                                                                       Z=TUPLE
 
-                                                    TUPLE4 = int(
-                                                        Z[block : block + 5], 2
-                                                    )
+                                                                                                                                                                       Z6=""
 
-                                                    block += 5
+                                                                                                                                                                       Z7=0
 
-                                                    E5 = int(
-                                                        Z[block : block + TUPLE4], 2
-                                                    )
+                                                                                                                                                                       TUPLE1=Z
 
-                                                    block += TUPLE4
+                                                                                                                                                                       cut_b=0
 
-                                                    b = 0
+                                                                                                                
 
-                                                    E3 = ""
+                                                                                                                                                                      
 
-                                                    while b < E5 - 1:
+                                                                                                                                                                    
 
-                                                        E3 += E2
+                                                                                                                                                                      
 
-                                                        b += 1
+                                                                                                                                                                       
 
-                                                        # print(E2)
+                                                                                                                                                                       long_F=len(TUPLE)
 
-                                                    TUPLE1 = TUPLE1[block:]
+                                                                                                                                                                       #print(len(TUPLE))
 
-                                                    TUPLE1 = (
-                                                        TUPLE1[:E1] + E3 + TUPLE1[E1:]
-                                                    )
+                                                                                                                                                                       
 
-                                                    block += long_F
+                                                                                                                                                                       
 
-                                                elif E == "1" or Z7 == 1:
+                                                                                                                                                                     
 
-                                                    block += 1
+                                                                                                                                                                     
 
-                                                    Z7 = 1
+                                                                                                                                                                       if N3==1:
 
-                                                    if cut_b == 0:
+                                                                                                                                                                     
 
-                                                        TUPLE1 = TUPLE1[block:]
+                                                                                                                                                                           
 
-                                                        cut_b = 1
+                                                                                                                                                                           E=Z[block:block+1]
 
-                                                        block += long_F
+                                                                                                                                                                           
 
-                                                        # print(block)
+                                                                                                                                                                           if E=="0":
 
-                                                # print(block)
+                                                                                                                                                                               cut_b=1
 
-                                            # print(Long_PM1)
+                                                                                                                                                                               CB+=1
 
-                                            TUPLE = TUPLE1
+                                                                                                                                                                               
 
-                                            # print(len(TUPLE))
+                                                                                                                                                                               block+=1
 
-                                            N3 = 1
+                                                                                                                                                                               E2=Z[block:block+8]
 
-                                            Circle_times += 1
+                                                                                                                                                                               block+=8
 
-                                            # print(Circle_times)
+                                                                                                                                                                               
 
-                                            INFO = TUPLE
+                                                                                                                                                                               E3=int(Z[block:block+5],2)
 
-                                            Extract1 = 0
+                                                                                                                                                                               block+=5
 
-                                            N3 = 0
+                                                                                                                                                                               S5=Z[block:block+E3]
 
-                                            # print(len(TUPLE))
+                                                                                                                                                                               if len(S5)==0:
 
-                                            # print(Circle_times4)
+                                                                                                                                                                                                   File_information5_17="00000000"+Check
 
-                                            if Circle_times == Circle_times4:
+                                                                                                                                                                                                   Ex=Check
 
-                                                Extract1 = 1
+                                                                                                                                                                                                   elapsed_time = process_file1(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
 
-                                                N3 = 2
+                                                                                                                                                                                                   return  elapsed_time  
 
-                                            if N3 == 2:
+                                                                                                                                                                                   
 
-                                                File_information5_17 = TUPLE
+                                                                                                                                                                                   
 
-                                                long_1 = len(File_information5_17)
+                                                                                                                                                                               
 
-                                                add_bits = ""
+                                                                                                                                                                               E1=int(Z[block:block+E3],2)
 
-                                                count_bits = 8 - long_1 % 8
+                                                                                                                                                                               block+=E3
 
-                                                z = 0
+                                                                                                                                                                               TUPLE4=int(Z[block:block+5],2)
 
-                                                if count_bits != 0:
+                                                                                                                                                                               block+=5
 
-                                                    while z < count_bits:
+                                                                                                                                                                               E5=int(Z[block:block+TUPLE4],2)
 
-                                                        add_bits = "0" + add_bits
+                                                                                                                                                                               block+=TUPLE4
 
-                                                        z = z + 1
+                                                                                                                                                                               b=0
 
-                                                File_information5_17 = (
-                                                    File_information5_17
-                                                )
+                                                                                                                                                                               E3=""
 
-                                                if Extract1 == 1:
+                                                                                                                                                                               while b<E5-1:
 
-                                                    L = len(File_information5_17)
+                                                                                                                                                                                   
 
-                                                    n = int(File_information5_17, 2)
+                                                                                                                                                                                   E3+=E2
 
-                                                    width_bits = len(
-                                                        File_information5_17
-                                                    )
+                                                                                                                                                                                   b+=1
 
-                                                    width_bits = (width_bits // 8) * 2
+                                                                                                                                                                                   #print(E2)
 
-                                                    width_bits = str(width_bits)
+                                                                                                                                                                               TUPLE1=TUPLE1[block:] 
 
-                                                    width_bits = "%0" + width_bits + "x"
+                                                                                                                                                                               TUPLE1=TUPLE1[:E1]+E3+TUPLE1[E1:]
 
-                                                    width_bits3 = binascii.unhexlify(
-                                                        width_bits % n
-                                                    )
+                                                                                                                                                                               block+=long_F                                                                                               
 
-                                                    width_bits2 = len(width_bits3)
+                                                                                                                                                                           elif E=="1":
 
-                                                    File_information5_2 = Clear
+                                                                                                                                                                                    block+=1
 
-                                                    jl = width_bits3
+                                                                                                                                                                                    Z7=1 
 
-                                                    long = len(name)
+                                                                                                                                                                                    
 
-                                                    name2 = name[: long - 2]
+                                                                                                                                                                                    if cut_b==0:
 
-                                                    with open(name2, "wb") as f2:
+                                                                                                                                                                                        TUPLE1=TUPLE1[block:]
 
-                                                        f2.write(width_bits3)
+                                                                                                                                                                                        block+=long_F
 
-                                                    x2 = time()
+                                                                                                                                                                                        
 
-                                                    x3 = x2 - x
+                                                                                                                                                                                        cut_b=1
 
-                                                    xs = float(x3)
+                                                                                                                                                                                        #print(CB)
 
-                                                    print(
-                                                        f"Speed bits: {(long_11 * 8) / x3:.5f}"
-                                                    )
+                                                                                                                                                                                        #print(block)
 
-                                                    xs = str(xs)
+                                                                                                                                                                                                                                                                   
 
-                                                    return xs
+                                                                                                                                                                                        
 
+                                                                                                                                                                            
 
-d = compression()
-xw1 = d.cryptograpy_compression4()
+                                                                                                                                                                           else:
+
+                                                                                                                                                                               block+=1                                                                                                                                                                                   
+
+                                                                                                                
+
+                                                                                                                
+
+                                                                                                                                                                                                                                  
+
+                                                                                                                                                                               
+
+                                                                                                                                                                               
+
+                                                                                                                                                                           
+
+                                                                                                                                                                           
+
+                                                                                                                                                                     
+
+                                                                                                                                                                     
+
+                                                                                                                                                                       
+
+                                                                                                                                                                     
+
+                                                                                                                                                                       #print(Long_PM1)
+
+                                                                                                                                                                       
+
+                                                                                                                                                                       TUPLE=TUPLE1
+
+                                                                                                                                                                       #print(len(TUPLE))
+
+                                                                                                                                                                        
+
+                                                                                                                                                                       N3=1
+
+                                                                                                                                                                       Circle_times+=1
+
+                                                                                                                                                                       #print(Circle_times)
+
+                                                                                                                                                                       INFO=TUPLE
+
+                                                                                                                                                                       Extract1=0
+
+                                                                                                                                                                       N3=0
+
+                                                                                                                                                                       #print(len(TUPLE))
+
+                                                                                                                                                                       #print(Circle_times4)
+
+                                                                                                                                                                       if Circle_times==Circle_times4:
+
+                                                                                                                                                                           
+
+                                                                                                                                                                           Extract1=1
+
+                                                                                                                                                                           if Check==TUPLE:
+
+                                                                                                                                                                               File_information5_17=Check2
+
+                                                                                             
+
+                                                                                                                                                                                                      
+
+                                                                                             
+
+                                                                                                                                                                           if Check!=TUPLE:
+
+                                                                                                                                                                                                                                                           Ex="00000000"+Check                                                                                                                                                                                                                                                      
+
+                                                                                                                                                                                                                                                           File_information5_17=Ex
+
+                                                                                                                                                                                                                                                           elapsed_time = process_file1(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
+
+                                                                                                                                                                                                                                                           return  elapsed_time      
+
+                                                                                                                                                                                                                                                           
+
+                                                                                                                                                                                                                                                                                                                                                              
+
+                                                                                                                                                                               
+
+                                                                                                                                                                               
+
+                                                                             
+
+                                                                               
+
+                                                    if Extract1==1:                
+
+                                                            L=len(File_information5_17)
+
+                                                            #print(L)
+
+                                                            n = int(File_information5_17, 2)
+
+                                                            width_bits=len(File_information5_17)
+
+                                                            width_bits=(width_bits//8)*2
+
+                                                            width_bits=str(width_bits)
+
+                                                            width_bits="%0"+width_bits+"x"
+
+                                                            width_bits3=binascii.unhexlify(width_bits % n)
+
+                                                            width_bits2=len(width_bits3)
+
+                                                            File_information5_2=Clear
+
+                                                        
+
+                                                            jl=width_bits3
+
+                                                            name1=name+".b"
+
+
+
+                                                   
+
+                                                    
+
+                                                            with open(name1, "wb") as f2:
+
+                                                                f2.write(jl)
+
+                                                            
+
+                                                            x2 = time()
+
+                                                            x3=x2-x 
+
+                                                            print(f"Speed bits: {(long_11) / x3:.5f}")
+
+                                                        
+
+    
+
+                                                        
+
+                                                            xs=float(x3)
+
+                                                            
+
+                                                            
+
+                                                            
+
+                                                            xs=str(xs)
+
+                                                            return xs;
+
+                         
+
+
+
+
+
+                                if i==2:
+
+                                    if C==1:
+
+                                        Extract1=0
+
+                                        if   File_information6_Times2==0:
+
+
+
+      
+
+                                            
+
+                                          
+
+                                                        File_information5=INFO
+
+                                                        Extract=0
+
+                                                        
+
+                                                        Ex=INFO 
+
+                                                        if Ex[:8]=="00000000":
+
+                                                               
+
+                                                                                                               
+
+
+
+                                                                                                                                   
+
+                                                                                                                                    L=len(Ex[8:])
+
+                                                                                                                                    File_information5_17=Ex[8:]
+
+                                                                                             
+
+                                                                                                                                    n = int(File_information5_17, 2) 
+
+                                                                                                                                    width_bits=len(File_information5_17)
+
+                                                                                                                                    width_bits=(width_bits//8)*2
+
+                                                                                                                                    width_bits=str(width_bits)
+
+                                                                                                                                    width_bits="%0"+width_bits+"x"
+
+                                                                                                                                    width_bits3=binascii.unhexlify(width_bits % n)
+
+                                                                                                                                    width_bits2=len(width_bits3)
+
+                                                                                                                                    File_information5_2=Clear
+
+                                                                                                                                 
+
+                                                                                                                                    jl=width_bits3
+
+                                                                                                                                    
+
+                                                                                                                           
+
+                                                                                                                                   
+
+                                                                                                                           
+
+                                                                                                                                    
+
+                                                                                        
+
+                                                                                                                                    long=len(name)
+
+                                                                                                                                    name2=name[:long-2]
+
+                                                                                                                                    with open(name2, "wb") as f2:
+
+                                                                                                                                        f2.write(width_bits3)
+
+                                                                                                                                    x2 = time()
+
+                                                                                                                                    x3=x2-x
+
+                                                                                                                                    xs=float(x3)
+
+                                                                                             
+
+                                    
+
+                                    
+
+                                                                                                                                    xs=str(xs)
+
+                                                                                                                                    
+
+                                                                                                                                    return xs;                                                                                                 
+
+                                                            
+
+                                                        
+
+                                                        if   Circle_times3==0:
+
+                                                                long_16=len(File_information5)
+
+                
+
+                                                                if File_information5[:1]=="0":
+
+                                                                    while File_information5[:1]!="1":
+
+                                                                        if File_information5[:1]=="0":
+
+                                                                            File_information5=File_information5[1:]
+
+                                                                            
+
+                                                                            
+
+                                                                if File_information5[:1]=="1":
+
+                                                                    File_information5=File_information5[1:]
+
+                                                        INFO=File_information5         
+
+                                                        if   Circle_times3==0:                
+
+                                                    
+
+                                                                    Circle_times4=int(INFO[:8],2)
+
+                                                                    #print(Circle_times4)
+
+                                                                    INFO=INFO[8:]
+
+                                                                    
+
+                                                                    
+
+                                                                    
+
+                                                                    
+
+                                                        while Extract1!=1:
+
+                                                                
+
+                                                                                                                               
+
+                                                                    
+
+                                                                En=int(INFO[:15],2)
+
+                                                                    #print(longl)
+
+                                                                INFO=INFO[15:]
+
+                                                                En2=0
+
+                                                                for i in range(3, 16):
+
+                                                                                                                                                    		if En <= (2**i) - 1:
+
+                                                                                                                                                    			longl = int(INFO[:i], 2)
+
+                                                                                                                                                    			INFO = INFO[i:]
+
+                                                                                                                                                    			SEN = i
+
+                                                                                                                                                    			break                               
+
+                                                                           
+
+                                                                
+
+                                                                Extract1=0
+
+                            
+
+                                                                TUPLE=""
+
+                                                                N3=0
+
+                                                                long_F=len(INFO)
+
+                                                                block=0
+
+                                                                Save=0
+
+                                                                           
+
+                                                                while block<len(INFO):
+
+                                                                                             
+
+                                                                                                    C9=0
+
+                                                                                                  
+
+                                                                                                
+
+                                                                                                    O=INFO[block:block+3]
+
+                                                                                                    
+
+                                                                                                    
+
+                                                                                                    
+
+                                                                                                    if O=="010":
+
+                                                                                               
+
+                                                                                                           block+=3
+
+                                                                                                           OC=INFO[block:block+En-2]
+
+                                                                                                           if len(OC)==0:
+
+                                                                                                              
+
+                                                                                                               File_information5_17=Ex
+
+                                                                                                               elapsed_time = process_file(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
+
+                                                                                                               
+
+                                                                                                               return  elapsed_time                                                                                                                
+
+                                                                                                           E=int(OC,2)
+
+                                                                                                           Row1="0"+str(En-2)+"b"
+
+                                                                                                           C9=1
+
+                                                                                                           
+
+                                                                                                           ZEROS_ONES=format(E,Row1)
+
+                                                                                                           if len(ZEROS_ONES)==0:
+
+                 
+
+                                                                                                               File_information5_17=Ex
+
+                                                                                                               elapsed_time = process_file(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
+
+                                                                                                               return  elapsed_time          
+
+                                                                                                           C="0"+str(longl-2)+"b"
+
+                                                                                                           ZEROS_ONES=format(E,Row1)
+
+                                                                                                           if len(ZEROS_ONES)==0:
+
+                                                                                                               Extract1=0
+
+                                                                                                               File_information5_17=Ex
+
+                                                                                                               elapsed_time = process_file(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
+
+                                                                                                               return  elapsed_time                                                                                                                                                                                                                                                                                                                                                    
+
+             
+
+                                                                                                                    
+
+                                                                                                           
+
+                                                                                                           
+
+                                                                                                
+
+                                                                                                                                                                                                                                                                                                                       
+
+                                                                                                           ZEROS_ONES="01"+ZEROS_ONES
+
+                                                                                                           ZEROS_ONE_1="01"+ZEROS_ONE_1
+
+                                                                                                           block+=En-2                                                                                   
+
+                                        
+
+                                                                                                             
+
+                                                                                                        
+
+                                                                                                        
+
+                                                                                                        
+
+                                                                                                                                            
+
+                                                                                                    
+
+                                                                                                    elif O=="011":
+
+                                                                                               
+
+                                                                                               
+
+                                                                                                        block+=3
+
+                                                                                                        
+
+                                                                                                        if En<=(8192*4)-1:                                                      
+
+                                                                                                        
+
+                                                                                                            OCl=INFO[block:block+SEN]
+
+                                                                                                            SiZeros_ones=int(OCl,2)
+
+                                                                                                            block+=SEN                                                               
+
+                                        
+
+                                        
+
+                                                                                                           
+
+                                                                                                        EB=INFO[block:block+(En-SiZeros_ones)]
+
+                                                                                                        S=len(EB)
+
+                                                                                                       
+
+                                                                                                        block+=En-SiZeros_ones
+
+                                                                                                        Row1="0"+str(En)+"b"
+
+                                                                                                        if S>0:
+
+                                                                                                            E=int(EB,2)
+
+                                                                                                        else:
+
+                                                                                                            E=0
+
+                                                                                                        ZEROS_ONES=format(E,Row1)
+
+                                                                                                        C="0"+str(longl)+"b"
+
+                                                                                                        ZEROS_ONES=format(E,Row1)
+
+                                                                                                        ZEROS_ONE_1=format(E,C)
+
+                                        
+
+                                                                                                                 
+
+                                                                                                                    
+
+                                                                                                    else:
+
+                                                                                                           EB=INFO[block:block+En]
+
+                                                                                                           block+=En
+
+                                                                                                           Row1="0"+str(En)+"b"
+
+                                                                                                          
+
+                                        
+
+                                                                                                           E=int(EB,2)
+
+                                                                                                           ZEROS_ONES=format(E,Row1)
+
+                                                                                                           C="0"+str(longl)+"b"
+
+                                                                                                           ZEROS_ONES=format(E,Row1)
+
+                                                                                                           ZEROS_ONE_1=format(E,C)                                                                                                   
+
+                                            
+
+                                                                                                    
+
+                                                                                                                                                    
+
+                                                                                                 
+
+                                                                                            
+
+                                                                                                    Z2=ZEROS_ONES
+
+                                                                                                    #print(Z2)
+
+                                        
+
+                                                                                                    TUPLE+=Z2                                                            
+
+                                                                                                    #print(block)
+
+                                                                                                    #print(long_F)
+
+                                                                                                    
+
+                                                                                                    
+
+                                                                                                    if block>=long_F:
+
+                                                                                                        Save=1
+
+                                                                                                        #print(Save)
+
+                                                                                                  
+
+                                        
+
+                                                                                               
+
+                                                                                                                                                                                                                                                    
+
+                                        
+
+                                                                                    
+
+                                                                                        #print(TUPLE)
+
+                                                                                     
+
+                            
+
+                                                                                                                                                                                                                                
+
+                                                                long_L=len(TUPLE)
+
+                                                                                        #print(long_L)
+
+                                                                if C9==0 and (long_L-En)>=0:
+
+                                                                                 TUPLE=TUPLE[:long_L-En]
+
+                                                                                 TUPLE+=ZEROS_ONE_1
+
+                                                                                        
+
+                                                                elif C9==1 and (long_L-2-En)>=0:
+
+                                                                                 TUPLE=TUPLE[:long_L-2-En]
+
+                                                                                 TUPLE+=ZEROS_ONE_1                                                                                            
+
+                                                                N3=1
+
+                                                                                        
+
+                                                                                       
+
+                                                                                        #print(N3)
+
+                                                                                                                                                 
+
+                                                                if N3==1:
+
+                                                                                   N3=1
+
+                                                                                  
+
+                                                                                            
+
+                                                                                   block=0
+
+                                                                                   long_F=len(TUPLE)
+
+                                                                                   Z=TUPLE
+
+                                                                                   Z6=""
+
+                                                                                   Z7=0
+
+                                                                                   TUPLE1=Z
+
+                                                                                   cut_b=0
+
+                            
+
+                                                                                  
+
+                                                                                
+
+                                                                                  
+
+                                                                                   
+
+                                                                                   long_F=len(TUPLE)
+
+                                                                                   while block<long_F:
+
+                                                                                       E=Z[block:block+1]
+
+                                                                                       
+
+                                                                                       if E=="0" and Z7==0:
+
+                                                                                           cut_b=1
+
+                                                                                           block+=1
+
+                                                                                           E2=Z[block:block+8]
+
+                                                                                           block+=8
+
+                                                                                           
+
+                                                                                           E3=int(Z[block:block+5],2)
+
+                                                                                           block+=5
+
+                                                                                           S5=Z[block:block+E3]
+
+                                                                                           if len(S5)==0:
+
+                                                                                                                                                                                   Extract1=0
+
+                                                                                                                                                                                   File_information5_17=Ex
+
+                                                                                                                                                                                   elapsed_time = process_file(Extract1=1, File_information5_17=File_information5_17, name=name, x=x)
+
+                                                                                                                                                                                   return  elapsed_time                                                                                        
+
+                                                                                           E1=int(Z[block:block+E3],2)
+
+                                                                                           block+=E3
+
+                                                                                           TUPLE4=int(Z[block:block+5],2)
+
+                                                                                           block+=5
+
+                                                                                           E5=int(Z[block:block+TUPLE4],2)
+
+                                                                                           block+=TUPLE4
+
+                                                                                           b=0
+
+                                                                                           E3=""
+
+                                                                                           while b<E5-1:
+
+                                                                                               
+
+                                                                                               E3+=E2
+
+                                                                                               b+=1
+
+                                                                                               #print(E2)
+
+                                                                                           TUPLE1=TUPLE1[block:] 
+
+                                                                                           TUPLE1=TUPLE1[:E1]+E3+TUPLE1[E1:]
+
+                                                                                           block+=long_F   
+
+                                                                                       elif E=="1" or Z7==1:
+
+                                                                                                block+=1
+
+                                                                                                Z7=1 
+
+                                                                                                
+
+                                                                                                if cut_b==0:
+
+                                                                                                    TUPLE1=TUPLE1[block:]
+
+                                                                                                    cut_b=1
+
+                                                                                                    block+=long_F
+
+                                                                                                    #print(block)
+
+                                                                                        
+
+                                                                                               
+
+                            
+
+                            
+
+                                                                                           #print(block)                                                    
+
+                                                                                           
+
+                                                                                           
+
+                                                                                       
+
+                                                                                       
+
+                                                                                 
+
+                                                                                 
+
+                                                                                   
+
+                                                                                 
+
+                                                                                   #print(Long_PM1)
+
+                                                                                   
+
+                                                                                   TUPLE=TUPLE1
+
+                                                                                   #print(len(TUPLE))
+
+                                                                                    
+
+                                                                                   N3=1
+
+                                                                                   Circle_times+=1
+
+                                                                                   #print(Circle_times)
+
+                                                                                   INFO=TUPLE
+
+                                                                                   Extract1=0
+
+                                                                                   N3=0
+
+                                                                                   #print(len(TUPLE))
+
+                                                                                   #print(Circle_times4)
+
+                                                                                   if Circle_times==Circle_times4:
+
+                                                                                       Extract1=1
+
+                                                                                       N3=2
+
+                                                                                       
+
+                                                                                   if N3==2:
+
+                                                                                       File_information5_17=TUPLE
+
+                                                                                       long_1=len(File_information5_17)
+
+                                                                                       add_bits=""
+
+                                                                                       count_bits=8-long_1%8
+
+                                                                                       z=0
+
+                                                                                       if count_bits!=0:
+
+                                                                                               while z<count_bits:
+
+                                                                                                       add_bits="0"+add_bits
+
+                                                                                                       z=z+1
+
+                                                                                       File_information5_17=File_information5_17
+
+                                                                                       if Extract1==1:                
+
+                                                                                                L=len(File_information5_17)
+
+                                                                                                n = int(File_information5_17, 2)
+
+                                                                                                width_bits=len(File_information5_17)
+
+                                                                                                width_bits=(width_bits//8)*2
+
+                                                                                                width_bits=str(width_bits)
+
+                                                                                                width_bits="%0"+width_bits+"x"
+
+                                                                                                width_bits3=binascii.unhexlify(width_bits % n)
+
+                                                                                                width_bits2=len(width_bits3)
+
+                                                                                                File_information5_2=Clear
+
+                                                                                             
+
+                                                                                                jl=width_bits3
+
+                                                                                                
+
+                                                                                       
+
+                                                                                               
+
+                                                                                       
+
+                                                                                                
+
+                                                    
+
+                                                                                                long=len(name)
+
+                                                                                                name2=name[:long-2]
+
+                                                                                                with open(name2, "wb") as f2:
+
+                                                                                                    f2.write(width_bits3)
+
+                                                                                                x2 = time()
+
+                                                                                                x3=x2-x
+
+                                                                                                xs=float(x3)
+
+                                                                                                print(f"Speed bits: {(long_11 * 8) / x3:.5f}")
+
+
+
+
+
+                                                                                                xs=str(xs)
+
+                                                                                                
+
+                                                                                                return xs;                                                           
+
+                                                            
+
+                                                            
+
+d=compression()
+xw1=d.cryptograpy_compression4()
 print(xw1)
