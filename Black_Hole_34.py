@@ -1110,7 +1110,7 @@ class compression:
                                                                     TUPLE1 = TUPLE1[
                                                                         block:
                                                                     ]
-                                                                    E1=E1*8
+                                                                    E1*=8
 
                                                                     TUPLE1 = (
                                                                         TUPLE1[:E1]
@@ -1608,7 +1608,7 @@ class compression:
                                                         # print(E2)
 
                                                     TUPLE1 = TUPLE1[block:]
-                                                    E1=E1*8
+                                                    E1*=8
 
                                                     TUPLE1 = (
                                                         TUPLE1[:E1] + E3 + TUPLE1[E1:]
