@@ -1174,8 +1174,9 @@ class compression:
                                                                 Extract1 = 1
 
                                                                 if Check == TUPLE:
-
-                                                                    File_information5_17 = (
+                                                                	if Check2[:8]=="00000000":
+                                                                		Check2=Check2[8:]
+                                                                		File_information5_17 = (
                                                                         Check2
                                                                     )
 
