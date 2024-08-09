@@ -384,7 +384,7 @@ class compression:
 
                                                 W1 = block - 16
 
-                                                Sw1 = format(W, '01b')
+                                                Sw1 = format(W//8, '01b')
 
                                                 Sw3 = format(len(Sw1), '05b')
 
@@ -1110,6 +1110,7 @@ class compression:
                                                                     TUPLE1 = TUPLE1[
                                                                         block:
                                                                     ]
+                                                                    E1=E1*8
 
                                                                     TUPLE1 = (
                                                                         TUPLE1[:E1]
@@ -1607,6 +1608,7 @@ class compression:
                                                         # print(E2)
 
                                                     TUPLE1 = TUPLE1[block:]
+                                                    E1=E1*8
 
                                                     TUPLE1 = (
                                                         TUPLE1[:E1] + E3 + TUPLE1[E1:]
