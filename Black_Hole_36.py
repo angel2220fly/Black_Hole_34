@@ -8,10 +8,10 @@ import sys
 # @Author Jurijus Pacalovas
 # Get the name of the current script
 
-if os.path.basename(sys.argv[0]) != 'Black_Hole_34.A.py':
-    sys.exit("This is not 'Black_Hole_34.A.py'.")
+if os.path.basename(sys.argv[0]) != 'Black_Hole_36.py':
+    sys.exit("This is not 'Black_Hole_36.py'.")
 
-print("The script 'Black_Hole_34.A.py' is currently running.")
+print("The script 'Black_Hole_36.py' is currently running.")
 
 
 class compression:
@@ -39,11 +39,12 @@ class compression:
                     return str(time() - x)
 
 
+
         def Count_adds(M1, En, Row1, Row):
 
             Row += 1
 
-            if Row == (8192 * 4) - 1:
+            if Row == (8192 * 256) - 1:
                 Row = 0
             if M1 == 0:
                 En -= 1
@@ -52,7 +53,7 @@ class compression:
                 En += 1
                 M1 = 1
 
-            if En == (8192 * 4) - 1:
+            if En == (8192 * 256) - 1:
 
                 M1 = 0
                 En = 255
@@ -365,7 +366,7 @@ class compression:
 
                                                 W1 = block - 16
 
-                                                Sw1 = format(W, '01b')
+                                                Sw1 = format(W//8, '01b')
 
                                                 Sw3 = format(len(Sw1), '05b')
 
@@ -425,7 +426,7 @@ class compression:
 
                                         # print(C1)
 
-                                        if (C3 >= 6 and En <= (2 ** (C3 - 4) - 1)) or INFO_A[:3] in {"011", "010"}:
+                                        if (C3 >= 6 or INFO_A[:3] in {"011", "010"}):
     
                                             # print(C3)
 
@@ -475,13 +476,14 @@ class compression:
 
                                         block += En
 
-                                    if Find == 2 or Row == (8192 * 4) - 2:
+                                    if Find == 2 or Row == (8192*8) - 2:#4     8  16   32  64 128 256
+              # 16 17 18       19  20 21    22
 
                                         Find = 1
 
                                         Extract1 = 1
 
-                                    elif Row == (8192 * 4) - 3 and Find == 3:
+                                    elif Row == (8192*8) - 3 and Find == 3:
 
                                         smallest_longl_F_values = (
                                             find_smallest_longl_F_values(input_string)
@@ -508,6 +510,7 @@ class compression:
                                             + str(len(TUPLE))
                                             + " / "
                                         )
+                                        #print(input_string)
 
                                         if len(input_string) > 100:
 
@@ -530,7 +533,7 @@ class compression:
                                                     + " / "
                                                 )
 
-                                                # print(input_string)
+                                                #print(input_string)
 
                                         Find = 3
 
@@ -556,7 +559,8 @@ class compression:
 
                                     CL1 = format(longl, W)
 
-                                    CL2 = format(En, '015b')
+                                    CL2 = format(En, '01b')
+                                    CL3 = format(len(CL2), '05b')
 
                                     # print(N3)
 
@@ -574,7 +578,7 @@ class compression:
 
                                         # print(long_11)
 
-                                        INFO = CL2 + CL1 + TUPLE
+                                        INFO = CL3 + CL2 + CL1 + TUPLE
 
                                         if Circle_times == 1:
 
@@ -712,16 +716,23 @@ class compression:
                                                         INFO = INFO[8:]
 
                                                     while Extract1 != 1:
-
-                                                        En = int(INFO[:15], 2)
+                                                    	
+                                                    	
+                                                        Enc = int(INFO[:5], 2)
 
                                                         # print(longl)
 
-                                                        INFO = INFO[15:]
+                                                        INFO = INFO[5:]                                                    	
+
+                                                        En = int(INFO[:Enc], 2)
+
+                                                        # print(longl)
+
+                                                        INFO = INFO[Enc:]
 
                                                         En2 = 0
 
-                                                        for i in range(3, 16):
+                                                        for i in range(3, 24):
 
                                                             if En <= (2**i) - 1:
 
@@ -833,7 +844,7 @@ class compression:
 
                                                                 C10 = 1
 
-                                                                if En <= (8192 * 4) - 1:
+                                                                if En <= (8192 * 256)-1:
 
                                                                     OCl = INFO[
                                                                         block : block
@@ -1091,7 +1102,7 @@ class compression:
                                                                     TUPLE1 = TUPLE1[
                                                                         block:
                                                                     ]
-                                                                    
+                                                                    E1*=8
 
                                                                     TUPLE1 = (
                                                                         TUPLE1[:E1]
@@ -1308,15 +1319,22 @@ class compression:
 
                                     while Extract1 != 1:
 
-                                        En = int(INFO[:15], 2)
+                                        Enc = int(INFO[:5], 2)
 
                                         # print(longl)
 
-                                        INFO = INFO[15:]
+                                        INFO = INFO[5:]
+                                        
+
+                                        En = int(INFO[:Enc], 2)
+
+                                        # print(longl)
+
+                                        INFO = INFO[Enc:]                                        
 
                                         En2 = 0
 
-                                        for i in range(3, 16):
+                                        for i in range(3, 24):
 
                                             if En <= (2**i) - 1:
 
@@ -1415,7 +1433,7 @@ class compression:
 
                                                 block += 3
 
-                                                if En <= (8192 * 4) - 1:
+                                                if En <= (8192 *256) - 1:
 
                                                     OCl = INFO[block : block + SEN]
 
@@ -1589,7 +1607,7 @@ class compression:
                                                         # print(E2)
 
                                                     TUPLE1 = TUPLE1[block:]
-                                                  
+                                                    E1*=8
 
                                                     TUPLE1 = (
                                                         TUPLE1[:E1] + E3 + TUPLE1[E1:]
