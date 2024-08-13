@@ -8,10 +8,10 @@ import sys
 # @Author Jurijus Pacalovas
 # Get the name of the current script
 
-if os.path.basename(sys.argv[0]) != 'Black_Hole_34.A.py':
-    sys.exit("This is not 'Black_Hole_34.A.py'.")
+if os.path.basename(sys.argv[0]) != 'Black_Hole_34.py':
+    sys.exit("This is not 'Black_Hole_34.py'.")
 
-print("The script 'Black_Hole_34.A.py' is currently running.")
+print("The script 'Black_Hole_34.py' is currently running.")
 
 
 class compression:
@@ -37,6 +37,7 @@ class compression:
                 with open(name[:-2], "wb") as f2:
                     f2.write(binascii.unhexlify(width_bits))
                     return str(time() - x)
+
 
 
         def Count_adds(M1, En, Row1, Row):
@@ -425,7 +426,7 @@ class compression:
 
                                         # print(C1)
 
-                                        if (C3 >= 6 or INFO_A[:3] in {"011", "010"}):
+                                        if (C3 >= 6 and En <= (2 ** (C3 - 4) - 1)) or INFO_A[:3] in {"011", "010"}:
     
                                             # print(C3)
 
@@ -475,13 +476,13 @@ class compression:
 
                                         block += En
 
-                                    if Find == 2 or Row == (2**23) - 2:
+                                    if Find == 2 or Row == (8192 * 4) - 2:
 
                                         Find = 1
 
                                         Extract1 = 1
 
-                                    elif Row == (2**23) - 3 and Find == 3:
+                                    elif Row == (8192 * 4) - 3 and Find == 3:
 
                                         smallest_longl_F_values = (
                                             find_smallest_longl_F_values(input_string)
@@ -556,8 +557,7 @@ class compression:
 
                                     CL1 = format(longl, W)
 
-                                    CL2 = format(En, '01b')
-                                    CL3 = format(len(En), '05b')
+                                    CL2 = format(En, '015b')
 
                                     # print(N3)
 
@@ -575,7 +575,7 @@ class compression:
 
                                         # print(long_11)
 
-                                        INFO = CL3 + CL2 + CL1 + TUPLE
+                                        INFO = CL2 + CL1 + TUPLE
 
                                         if Circle_times == 1:
 
@@ -713,15 +713,8 @@ class compression:
                                                         INFO = INFO[8:]
 
                                                     while Extract1 != 1:
-                                                    	
-                                                    	
-                                                        Enc = int(INFO[:5], 2)
 
-                                                        # print(longl)
-
-                                                        INFO = INFO[5:]                                                    	
-
-                                                        En = int(INFO[:Enc], 2)
+                                                        En = int(INFO[:15], 2)
 
                                                         # print(longl)
 
@@ -729,7 +722,7 @@ class compression:
 
                                                         En2 = 0
 
-                                                        for i in range(3, 24):
+                                                        for i in range(3, 16):
 
                                                             if En <= (2**i) - 1:
 
