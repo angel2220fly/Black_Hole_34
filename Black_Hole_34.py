@@ -50,8 +50,6 @@ class compression:
                 Row = 0
 
             if En == (8192 * 4) - 1:
-
-                M1 = 0
                 En = 255
             En+=1
 
