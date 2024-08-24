@@ -43,11 +43,11 @@ class compression:
         def Count_adds(M1, En, Row1, Row):
 
             Row += 1
+            M=1
 
             if Row == (8192 * 4) - 1:
                 Row = 0
-            if M1 == 0:
-                En -= 1
+    
 
             if En == 3 or M1 == 1:
                 En += 1
@@ -278,7 +278,7 @@ class compression:
 
                                 Find = 0
 
-                                En = 6
+                                En = 3
 
                                 Ci = 1
 
