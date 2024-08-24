@@ -40,23 +40,20 @@ class compression:
 
 
 
+
         def Count_adds(M1, En, Row1, Row):
 
             Row += 1
-            M=1
+           
 
             if Row == (8192 * 4) - 1:
                 Row = 0
-    
-
-            if En == 3 or M1 == 1:
-                En += 1
-                M1 = 1
 
             if En == (8192 * 4) - 1:
 
                 M1 = 0
                 En = 255
+            En+=1
 
             return M1, En, Row1, Row
 
