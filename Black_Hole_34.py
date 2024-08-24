@@ -41,7 +41,7 @@ class compression:
 
 
 
-        def Count_adds(M1, En, Row1, Row):
+        def Count_adds(En, Row1, Row):
 
             Row += 1
            
@@ -55,7 +55,7 @@ class compression:
                 En = 255
             En+=1
 
-            return M1, En, Row1, Row
+            return En, Row1, Row
 
         import re
 
@@ -532,19 +532,14 @@ class compression:
 
                                         Find = 3
 
-                                        M1, En, Row1, Row = Count_adds(
-                                            M1, En, Row1, Row
-                                        )
+                                        En, Row1, Row = Count_adds(En, Row1, Row)
 
                                         # print(En)
 
                                         # print(len(TUPLE))
 
                                     else:
-
-                                        M1, En, Row1, Row = Count_adds(
-                                            M1, En, Row1, Row
-                                        )
+                                            En, Row1, Row = Count_adds(En, Row1, Row)
 
                                 if Ci == 1:
 
