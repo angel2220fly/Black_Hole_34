@@ -319,7 +319,12 @@ class compression:
 
                                     SINFO = INFO
 
-                                while block < long_F:
+                                if I8[long_F-8]!="00000000":
+                                    I8+="00000000"
+                                else:
+                                	I8+="11111111"
+
+                                while block < long_F+8:
 
                                     IF = I8[block : block + 8]
 
@@ -347,13 +352,13 @@ class compression:
 
                                     if IF1 != IF:
 
-                                        if FC < 2:
+                                        if FC < 4:
 
                                             FC = 0
 
                                         if Z7 == 0:
 
-                                            if FC >= 2:
+                                            if FC >= 4:
 
                                                 Z7 = 1
 
@@ -388,6 +393,8 @@ class compression:
                                 W4 = W5 + W4
 
                                 INFO = W4
+                                long_F = len(INFO)
+                                INFO=INFO[:long_F-8]
 
                                 # print(len(INFO))
 
