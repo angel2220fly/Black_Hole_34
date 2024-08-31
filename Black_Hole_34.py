@@ -352,13 +352,13 @@ class compression:
 
                                     if IF1 != IF:
 
-                                        if FC < 4:
+                                        if FC < 3:
 
                                             FC = 0
 
                                         if Z7 == 0:
 
-                                            if FC >= 4:
+                                            if FC >= 3:
 
                                                 Z7 = 1
 
